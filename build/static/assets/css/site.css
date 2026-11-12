@@ -138,7 +138,7 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--text-2); }
 .orgs { padding-top: 96px; }
 .orgs h2 { margin-bottom: 24px; }
 .logos { display: flex; flex-wrap: wrap; gap: 32px 56px; align-items: center; list-style: none; margin: 0; padding: 0; }
-.logos img { height: 44px; width: auto; }
+.logos img { height: var(--h, 44px); width: auto; }
 
 .about-blurb { padding-top: var(--section); display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; }
 .about-blurb .portrait { flex: 0 0 240px; }
@@ -204,7 +204,7 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--text-2); }
   .next-project { padding-top: 96px; }
   .next-title { font-size: 24px; }
   .logos { gap: 24px 36px; }
-  .logos img { height: 36px; }
+  .logos img { height: calc(var(--h, 44px) * .8); }
 }
 
 @media (prefers-reduced-motion: reduce) {

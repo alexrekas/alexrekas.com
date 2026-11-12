@@ -51,13 +51,7 @@ if __name__ == "__main__":
     for name in ENROLL:
         retile(SRC / name, OUT / name.replace(".png", "-dark.png"))
     swap_flat(SRC / "enroll-newemployer-userflow.png", OUT / "enroll-newemployer-userflow-dark.png")
-    for s, o in [
-        ("trustedby-marriott2.png", "logo-marriott.png"),
-        ("ar-trustedBrands-CDC.png", "logo-cdc.png"),
-        ("trustedby-goodwill2.png", "logo-goodwill.png"),
-        ("trustedby-dCS2.png", "logo-dcs.png"),
-    ]:
-        print(o, gray_logo(s, o))
+    # client logos are now vector files: see build/mono_logos.py
 
 
 # ---------------------------------------------------------------- share images
