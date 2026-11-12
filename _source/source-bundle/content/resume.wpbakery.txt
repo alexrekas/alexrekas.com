@@ -1,0 +1,60 @@
+[vc_row full_width="stretch_row" css=".vc_custom_1579221036875{margin-top: -100px !important;padding-top: 300px !important;}"][vc_column][vc_row_inner equal_height="yes"][vc_column_inner width="3/4" el_class="col-xs-6"][vc_column_text]
+<h1><strong>Alex Rekas</strong></h1>
+<h2>Design Lead | Senior Product/UX Designer</h2>
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4" el_class="col-xs-6"][vc_icon type="fontawesome" icon_fontawesome="fa fa-regular fa-file-pdf" align="right" custom_color="#0066FF" color="custom" link="url:https%3A%2F%2Falexrekas.com%2Fwp-content%2Fuploads%2F2026%2F09%2FAlexRekas-Resume-2026.pdf|target:_blank"][/vc_column_inner][/vc_row_inner][vc_row_inner][vc_column_inner][vc_text_separator title="SUMMARY" title_align="separator_align_left" align="align_right" el_class=".separator-bold"][vc_column_text]Design Lead with 12+ years designing end-to-end products for complex, regulated domains — healthcare, government, and enterprise SaaS. I turn dense policy and operational logic into simple, trustworthy workflows and partner closely with engineering to ship them. An industrial design and brand background gives me an eye for visual craft alongside systems thinking. Brought a multi-state platform's design system to WCAG AA / Section 508 compliance, and I use AI tools (Claude, Figma Make) daily for research synthesis and rapid prototyping.[/vc_column_text][vc_text_separator title="WORK EXPERIENCE" title_align="separator_align_left" align="align_right" el_class=".separator-bold"][vc_column_text]
+<h3><strong>IdeaCrew / Design Lead</strong></h3>
+7/2020 - PRESENT, DC &amp; REMOTE
+
+&nbsp;
+<p style="padding-left: 40px;">Lead design for a multi-state health-insurance marketplace platform (DC, Maine, Massachusetts), covering eligibility, income verification, and subsidy workflows.
+Redesigned core task flows using heuristic reviews, call center feedback and support ticket logs.
+Led the redesign of Enroll App’s enrollment experience, now live in Maine’s Individual Market.
+Translate complex healthcare policy into clear, step-by-step workflows that reduce administrative burden for applicants and staff.
+Led all design for a $1M+ platform modernization (Bootstrap 3 to 5), improving UX across dozens of screens and bringing the full design system into WCAG AA / 508 compliance.
+Partner with product, engineering, and policy/compliance leads from problem framing through delivery, shaping user stories, design patterns, and implementation decisions.
+Prototype and validate new product concepts with AI tools (Claude, Figma Make), then lead design reviews to align cross-functional teams.
+Own and maintain the design system engineers use to ship consistent, accessible UI.
+Find openings inside state-funded work orders to fix broken UX patterns alongside required changes.</p>
+&nbsp;
+<h3><strong>Contract &amp; Freelance / Designer</strong></h3>
+4/2016 - PRESENT, DC &amp; REMOTE
+
+&nbsp;
+<h4 style="padding-left: 40px;"><strong>Newmark Knight Frank</strong></h4>
+<p style="padding-left: 40px;">Conducted user interviews with current and prospective users to inform product decisions and surface unmet needs.
+Communicated design rationale and key UX objectives to stakeholders through wireframes and structured presentations.
+Mapped a new debt-transaction workflow into the client’s CRM as interactive wireframes tied to a prioritized backlog.</p>
+&nbsp;
+<h4 style="padding-left: 40px;"><strong>Marriott International</strong></h4>
+<p style="padding-left: 40px;">Led product and UX design for employee training systems, improving usability and learner experience.
+Provided creative direction for brand photography, design systems, and print media for internal communications.
+Designed logo identities and visual systems for internal teams and events within Marriott's brand standards.</p>
+&nbsp;
+<h4 style="padding-left: 40px;"><strong>Centers for Disease Control &amp; Prevention (CDC)</strong></h4>
+<p style="padding-left: 40px;">Built wireframes for cdc.gov aligned with newly established federal design guidelines.
+Conducted a heuristic evaluation of the CDC website, producing a prioritized report of usability findings and recommendations.
+Developed storyboards for digital content deployed across the website and social media channels.</p>
+&nbsp;
+<h4 style="padding-left: 40px;"><strong>Various Clients</strong></h4>
+<p style="padding-left: 40px;">Designed brand identities and marketing websites end-to-end for startups and established companies.
+Delivered UX/UI for mobile and web applications from concept through launch.
+Ran research and discovery sessions to build personas that anchored design decisions.</p>
+&nbsp;
+<h3><strong>Distributed Solutions / Designer</strong></h3>
+4/2013 - 4/2016, RESTON VA
+
+&nbsp;
+<p style="padding-left: 40px;">Designed wireframes and high-fidelity mockups for new features and iterative updates across a multi-product enterprise software suite.
+Built front-end implementations of designed screens using HTML, CSS, and JavaScript, bridging design and development.
+Maintained visual guidelines and a shared asset library to enforce consistency across the product portfolio.</p>
+[/vc_column_text][/vc_column_inner][/vc_row_inner][vc_text_separator title="SKILLS" title_align="separator_align_left" align="align_right" el_class=".separator-bold"][vc_column_text]<strong>Design</strong>: Product design, UX/UI, interaction design, information architecture, user research, usability testing, prototyping, accessibility (WCAG AA / 508), design systems, brand identity
+<strong>Tools</strong>: Figma, Figma Make, Claude and AI-assisted prototyping, Adobe Creative Suite (Photoshop, Illustrator, XD, InDesign)
+<strong>Domain</strong>: Healthcare technology, government / federal, enterprise SaaS[/vc_column_text][vc_text_separator title="EDUCATION" title_align="separator_align_left" align="align_right" el_class=".separator-bold"][vc_column_text]
+<h3><strong>James Madison University</strong></h3>
+B.S. Studio Art - Industrial Design, 2010
+<h3><strong>Northern Virginia Community College</strong></h3>
+A.S. Mathematics, 2008
+<h3><a href="http://umbauschool.org/" target="_blank" rel="noopener">umbau school</a></h3>
+Summer Studio; Vienna, Austria, 2009
+<h3><a href="https://ruralstudio.org/" target="_blank" rel="noopener">Rural Studio</a></h3>
+Volunteer; Auburn University, Alabama, 2011[/vc_column_text][/vc_column][/vc_row]

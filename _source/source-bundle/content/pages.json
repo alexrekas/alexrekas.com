@@ -1,0 +1,128 @@
+[
+ {
+  "wordpress_id": 8432,
+  "title": "Home",
+  "url": "/",
+  "file": "content/home.wpbakery.txt"
+ },
+ {
+  "wordpress_id": 8433,
+  "title": "About",
+  "url": "/about/",
+  "file": "content/about.wpbakery.txt"
+ },
+ {
+  "wordpress_id": 8446,
+  "title": "Work",
+  "url": "/portfolio/",
+  "file": "content/portfolio.wpbakery.txt"
+ },
+ {
+  "wordpress_id": 8445,
+  "title": "Resume",
+  "url": "/resume/",
+  "file": "content/resume.wpbakery.txt"
+ },
+ {
+  "wordpress_id": 5587,
+  "title": "Privacy",
+  "url": "/privacy/",
+  "file": "content/privacy.wpbakery.txt"
+ },
+ {
+  "wordpress_id": 8428,
+  "title": "Enroll App",
+  "url": "/portfolio/enroll-app/",
+  "file": "content/portfolio-enroll-app.wpbakery.txt"
+ },
+ {
+  "wordpress_id": 8496,
+  "title": "Vitae 27",
+  "url": "/portfolio/vitae-27/",
+  "file": "content/portfolio-vitae-27.wpbakery.txt"
+ },
+ {
+  "wordpress_id": 8429,
+  "title": "WorkRadar",
+  "url": "/portfolio/workradar/",
+  "file": "content/portfolio-workradar.wpbakery.txt"
+ },
+ {
+  "wordpress_id": 8430,
+  "title": "RegSearch",
+  "url": "/portfolio/regsearch/",
+  "file": "content/portfolio-regsearch.wpbakery.txt"
+ },
+ {
+  "wordpress_id": 8431,
+  "title": "TakeCare",
+  "url": "/portfolio/takecare/",
+  "file": "content/portfolio-takecare.wpbakery.txt"
+ },
+ {
+  "wordpress_id": 8497,
+  "title": "IdeaCrew Rebrand",
+  "url": "/portfolio/ideacrew-rebrand/",
+  "file": "content/portfolio-ideacrew-rebrand.wpbakery.txt"
+ },
+ {
+  "wordpress_id": 8440,
+  "title": "CDC Public Health Law",
+  "url": "/portfolio/cdc/",
+  "file": "content/portfolio-cdc.wpbakery.txt"
+ },
+ {
+  "wordpress_id": 8441,
+  "title": "Major CRE Firm",
+  "url": "/portfolio/cre-crm/",
+  "file": "content/portfolio-cre-crm.wpbakery.txt"
+ },
+ {
+  "wordpress_id": 8459,
+  "title": "CrossFit Metropolis",
+  "url": "/portfolio/crossfit-metropolis/",
+  "file": "content/portfolio-crossfit-metropolis.wpbakery.txt"
+ },
+ {
+  "wordpress_id": 8460,
+  "title": "Pollen Productions",
+  "url": "/portfolio/pollen-productions/",
+  "file": "content/portfolio-pollen-productions.wpbakery.txt"
+ },
+ {
+  "wordpress_id": 8461,
+  "title": "How Much?",
+  "url": "/portfolio/how-much/",
+  "file": "content/portfolio-how-much.wpbakery.txt"
+ },
+ {
+  "wordpress_id": 8462,
+  "title": "Logos and Print",
+  "url": "/portfolio/extras/",
+  "file": "content/portfolio-extras.wpbakery.txt"
+ },
+ {
+  "wordpress_id": 8463,
+  "title": "BEN",
+  "url": "/portfolio/ben/",
+  "file": "content/portfolio-ben.wpbakery.txt"
+ },
+ {
+  "wordpress_id": 8464,
+  "title": "London",
+  "url": "/portfolio/london/",
+  "file": "content/portfolio-london.wpbakery.txt"
+ },
+ {
+  "wordpress_id": 8465,
+  "title": "SNOWATCH",
+  "url": "/portfolio/snowatch/",
+  "file": "content/portfolio-snowatch.wpbakery.txt"
+ },
+ {
+  "wordpress_id": 8466,
+  "title": "ERGO",
+  "url": "/portfolio/ergo/",
+  "file": "content/portfolio-ergo.wpbakery.txt"
+ }
+]

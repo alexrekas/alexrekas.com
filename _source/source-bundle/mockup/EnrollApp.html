@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Enroll App case study</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F1012}
+a{color:#EDEDEE;text-decoration:none}a:hover{color:#8FB4FF}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #0F1012; color: #EDEDEE; font-family: 'IBM Plex Sans', system-ui, sans-serif; font-size: 17px; line-height: 1.6">
+
+<header style="max-width: 1200px; margin: 0 auto; padding: 24px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between">
+<a href="Main.dc.html" style="font-size: 18px; font-weight: 500; color: #EDEDEE">Alex Rekas</a>
+<nav aria-label="Main" style="display: flex; gap: 28px; font-size: 15px">
+<a href="Main.dc.html" style="color: #C9CBCF">Work</a>
+<a href="#about" style="color: #C9CBCF">About</a>
+<a href="#resume" style="color: #C9CBCF">Resume</a>
+</nav>
+</header>
+
+<main style="max-width: 1200px; margin: 0 auto; padding: 0 24px">
+
+<section style="padding: 64px 0 40px; max-width: 820px">
+<h1 style="margin: 0 0 28px; font-size: clamp(40px, 5vw, 60px); line-height: 1.05; font-weight: 500; letter-spacing: -0.02em">Enroll App</h1>
+<p style="margin: 0; font-size: 19px; color: #D4D6DA">Enroll App runs the health insurance marketplaces for Washington DC, Maine and Massachusetts. I led the redesign of the enrollment experience: mobile-first, WCAG AA and Section 508 compliant, and built on a new Figma design system as the platform moved off Bootstrap 3. The redesign is live in Maine's Individual Market, with DC's migration planned for 2026–2027.</p>
+</section>
+
+<dl style="margin: 0 0 48px; display: grid; grid-template-columns: 140px minmax(0, 1fr); row-gap: 14px; column-gap: 24px; align-items: center; max-width: 820px">
+<dt style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #A6A8AD">Role</dt><dd style="margin: 0">Design Lead</dd>
+<dt style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #A6A8AD">Company</dt><dd style="margin: 0">IdeaCrew</dd>
+<dt style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #A6A8AD">Team</dt><dd style="margin: 0; color: #C9CBCF">[Names, with permission]</dd>
+<dt style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #A6A8AD">Services</dt>
+<dd style="margin: 0; display: flex; flex-wrap: wrap; gap: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; color: #C9CBCF"><span style="border: 1px solid #3A3D43; border-radius: 999px; padding: 5px 12px">Product design</span><span style="border: 1px solid #3A3D43; border-radius: 999px; padding: 5px 12px">Accessibility</span><span style="border: 1px solid #3A3D43; border-radius: 999px; padding: 5px 12px">Research</span><span style="border: 1px solid #3A3D43; border-radius: 999px; padding: 5px 12px">Design system</span></dd>
+<dt style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #A6A8AD">Years</dt><dd style="margin: 0">[Start year]–present</dd>
+</dl>
+
+<figure style="margin: 0"><img src="assets/enroll-newemployer-01-hero.png" alt="Redesigned Personal Information step on desktop and phone" style="display: block; width: 100%; height: auto; border-radius: 18px"></figure>
+
+<section style="padding: 112px 0 0">
+<div style="max-width: 760px; margin-bottom: 40px">
+<h2 style="margin: 0 0 16px; font-size: 30px; font-weight: 500">New employer enrollment</h2>
+<p style="margin: 0; color: #C9CBCF">Small businesses signing up for coverage used to face one long form: personal details, employer details, office locations and notice preferences all on a single page, ending in a red Confirm button. I split it into three short steps (Personal Information, Business Information and Communication) with a progress rail that shows where you are and what's left. Each step asks about one thing, so people can stop, check a document and come back without losing their place.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 32px">
+<sc-for list="{{steps}}" as="s" hint-placeholder-count="4">
+<figure style="margin: 0">
+<img src="{{s.src}}" alt="{{s.alt}}" style="display: block; width: 100%; height: auto; border-radius: 14px">
+<figcaption style="margin-top: 14px; font-size: 15px; color: #C9CBCF">{{s.caption}}</figcaption>
+</figure>
+</sc-for>
+</div>
+</section>
+
+<section style="padding: 112px 0 0">
+<div style="max-width: 760px; margin-bottom: 40px">
+<h2 style="margin: 0 0 16px; font-size: 30px; font-weight: 500">On a phone</h2>
+<p style="margin: 0; color: #C9CBCF">A significant share of marketplace users only have a phone, but the old app had no mobile support. Every step of the new flow was designed at phone width first, then expanded for desktop. Fields stack in a single column, actions stay at the bottom of the step, and nothing requires horizontal scrolling.</p>
+</div>
+<figure style="margin: 0">
+<div><img src="assets/enroll-newemployer-05-phones.png" alt="The new employer steps on a phone" style="display: block; width: 100%; height: auto; border-radius: 18px"></div>
+<figcaption style="margin-top: 14px; font-size: 15px; color: #C9CBCF">The same three steps, designed for phone first.</figcaption>
+</figure>
+</section>
+
+<section style="padding: 112px 0 0">
+<div style="max-width: 760px; margin-bottom: 40px">
+<h2 style="margin: 0 0 16px; font-size: 30px; font-weight: 500">Accessible by default</h2>
+<p style="margin: 0; color: #C9CBCF">The audit found federal accessibility violations that made enrollment impossible for some people with disabilities. Rather than patch screens one at a time, I built WCAG AA and Section 508 requirements into the design system's foundations (color, type, components and interaction states), so every new feature inherits them.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 32px">
+<figure style="margin: 0">
+<div role="img" aria-label="Placeholder for close-ups of focus, error and disabled field states" style="background: #1E2024; border-radius: 14px; padding: 40px; display: flex; flex-direction: column; gap: 18px">
+<div style="background: #FFFFFF; border-radius: 8px; padding: 18px; display: flex; flex-direction: column; gap: 8px"><div style="height: 8px; width: 30%; background: #1F2328; border-radius: 2px"></div><div style="height: 30px; border: 2px solid #3B6FD8; border-radius: 4px; box-shadow: 0 0 0 3px #BFD2F8"></div></div>
+<div style="background: #FFFFFF; border-radius: 8px; padding: 18px; display: flex; flex-direction: column; gap: 8px"><div style="height: 8px; width: 30%; background: #1F2328; border-radius: 2px"></div><div style="height: 30px; border: 2px solid #B42318; border-radius: 4px"></div><div style="height: 7px; width: 55%; background: #B42318; border-radius: 2px"></div></div>
+</div>
+<figcaption style="margin-top: 14px; font-size: 15px; color: #C9CBCF">Focus, error and disabled states meet WCAG AA contrast.</figcaption>
+</figure>
+<figure style="margin: 0">
+<div role="img" aria-label="Placeholder for design system color palette and type scale" style="background: #1E2024; border-radius: 14px; padding: 40px; display: flex; flex-direction: column; gap: 18px; height: 100%; box-sizing: border-box">
+<div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px"><div style="height: 64px; background: #1F3A68; border-radius: 6px"></div><div style="height: 64px; background: #3B6FD8; border-radius: 6px"></div><div style="height: 64px; background: #BFD2F8; border-radius: 6px"></div><div style="height: 64px; background: #1F2328; border-radius: 6px"></div><div style="height: 64px; background: #F0F2F5; border-radius: 6px"></div></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="height: 22px; width: 55%; background: #D4D6DA; border-radius: 3px"></div><div style="height: 16px; width: 42%; background: #A6A8AD; border-radius: 3px"></div><div style="height: 12px; width: 70%; background: #6E7177; border-radius: 3px"></div></div>
+</div>
+<figcaption style="margin-top: 14px; font-size: 15px; color: #C9CBCF">Accessibility rules live in the system, so new screens inherit them.</figcaption>
+</figure>
+</div>
+</section>
+
+
+<section style="padding: 112px 0 0">
+<h2 style="margin: 0 0 40px; font-size: 30px; font-weight: 500">Before and after</h2>
+<figure style="margin: 0">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 24px">
+<div style="background: #1E2024; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #A6A8AD">Before</span>
+<img src="assets/Enroll-NewEmployer-old.png" alt="The old single-page employer form" style="display: block; width: 100%; height: auto; border-radius: 6px">
+</div>
+<div style="background: #1E2024; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #A6A8AD">After</span>
+<img src="assets/enroll-newemployer-01b-personal.png" alt="The first step of the redesigned flow" style="display: block; width: 100%; height: auto; border-radius: 6px">
+</div>
+</div>
+<figcaption style="margin-top: 14px; font-size: 15px; color: #C9CBCF">One long form became three focused steps.</figcaption>
+</figure>
+</section>
+
+<section style="padding: 112px 0 0">
+<figure style="margin: 0">
+<div role="img" aria-label="Placeholder for a screen recording of the prototype" style="aspect-ratio: 16 / 9; background: #1E2024; border-radius: 18px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px">
+<svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="none" stroke="#6E7177" stroke-width="2"></circle><path d="M26 21 L45 32 L26 43 Z" fill="#A6A8AD"></path></svg>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A6A8AD">Replace with: 20–30 second looping prototype recording</span>
+</div>
+</figure>
+</section>
+
+<section style="padding: 112px 0 0; max-width: 760px">
+<p style="margin: 0 0 20px; font-size: 19px; color: #D4D6DA">The redesign is live in Maine's Individual Market, with an unbranded reference version ready for the other markets. DC's migration, the platform's largest deployment, is planned for 2026–2027.</p>
+<a href="#figma" style="font-size: 15px; color: #8FB4FF">Open the prototype in Figma →</a>
+<blockquote style="margin: 48px 0 0; padding: 0 0 0 0; font-size: 22px; line-height: 1.45; color: #EDEDEE">“[Quote from an IdeaCrew product owner or Maine marketplace contact.]”<span style="display: block; margin-top: 12px; font-size: 14px; color: #A6A8AD">[Name], [Title]</span></blockquote>
+</section>
+
+<section style="padding: 128px 0 96px">
+<a href="WorkRadar.dc.html" style="display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; justify-content: space-between; border-top: 1px solid #2E3035; padding-top: 28px; color: #EDEDEE">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #A6A8AD">Next project</span>
+<span style="font-size: 28px; font-weight: 500">WorkRadar →</span>
+</a>
+</section>
+
+</main>
+
+<footer style="border-top: 1px solid #222428">
+<div style="max-width: 1200px; margin: 0 auto; padding: 24px; display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; font-size: 14px; color: #A6A8AD">
+<span>© 2026 Alex Rekas</span>
+<div style="display: flex; gap: 20px"><a href="#linkedin" style="color: #A6A8AD">LinkedIn</a><a href="#dribbble" style="color: #A6A8AD">Dribbble</a><a href="#privacy" style="color: #A6A8AD">Privacy</a></div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6400}}'>
+class Component extends DCLogic {
+renderVals() {
+const on = 'height: 8px; width: 80%; background: #3B6FD8; border-radius: 2px';
+const off = 'height: 8px; width: 70%; background: #D5D8DE; border-radius: 2px';
+const done = 'height: 8px; width: 75%; background: #7FA3E8; border-radius: 2px';
+const rail = (i) => [0, 1, 2].map((n) => ({ style: n === i ? on : n < i ? done : off }));
+const steps = [
+{ src: 'assets/enroll-newemployer-01b-personal.png', title: 'Personal Information', caption: "Step one asks only for the account holder's own details.", alt: 'Personal Information step', rail: rail(0) },
+{ src: 'assets/enroll-newemployer-02-business.png', title: 'Business Information', caption: 'Business details get their own step, with a rail showing progress.', alt: 'Business Information step', rail: rail(1) },
+{ src: 'assets/enroll-newemployer-03-communication.png', title: 'Communication', caption: 'Employers choose how they want to receive official notices.', alt: 'Communication step', rail: rail(2) },
+{ src: 'assets/enroll-newemployer-04-complete.png', title: 'Complete', caption: 'A clear finish tells employers exactly what happens next.', alt: 'Enrollment complete screen', rail: rail(3) }
+];
+const phones = [
+{ title: 'Personal Information', alt: 'Placeholder for the Personal Information step on a phone' },
+{ title: 'Business Information', alt: 'Placeholder for the Business Information step on a phone' },
+{ title: 'Communication', alt: 'Placeholder for the Communication step on a phone' }
+];
+return { steps, phones };
+}
+}
+</script>
+</body>
+</html>
