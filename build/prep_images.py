@@ -126,7 +126,7 @@ SHARES = [
     ("vitae-27", "Vitae 27", None, "One system for three state marketplace brands, built by directing an AI coding agent"),
     ("regsearch", "RegSearch", "regsearch-new3.png", "Federal procurement regulations, actually searchable"),
     ("takecare", "TakeCare", "TakeCare-logo.png", "A wellness brand for Marriott's global workforce"),
-    ("ideacrew-rebrand", "IdeaCrew Rebrand", None, "Leading IdeaCrew's 2026 rebrand, from first concepts through launch"),
+    ("ideacrew-rebrand", "IdeaCrew Rebrand", "ideacrew-before-after.png", "Evolving the mark into a brand system"),
     ("work", "Work", None, "Product design case studies by Alex Rekas"),
     ("about", "About Alex Rekas", None, "Design Lead and Product Designer in Richmond, VA"),
     ("resume", "Alex Rekas", None, "Resume · Design Lead | Senior Product/UX Designer"),
