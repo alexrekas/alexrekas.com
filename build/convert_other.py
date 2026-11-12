@@ -44,7 +44,7 @@ ALT = {
     "4950": "The quote tool on a laptop and a phone, with an illustrated question asking which wedding moments matter most.",
     # Extras
     "4499": "Herndon Farm to Table logo: line drawings of a sun, barn and place setting in white on weathered wood.",
-    "5456": "Seneca Biopharma logo: a striped mark beside the word seneca.",
+    "5456": "Seneca Biopharma logo: a striped mark beside the lowercase word seneca and the line biopharma, inc.",
     "4528": "ClassWallet logo: a white rounded-square icon and wordmark on bright blue.",
     "5187": "Brand Talent logo for Marriott: a red and pink geometric mark beside the words Brand Talent.",
     "5457": "Champions in Action logo: a light blue C badge beside stacked lettering on navy.",
@@ -197,6 +197,8 @@ def convert(slug):
         r'<div><img src="[^"]*/([^"/]+)"[^>]*></div><p>(<mark class="fill review">.*?</mark>)</p>',
         lambda m: f'<figure class="on-dark"><x-img src="{m.group(1)}" alt="{ALT[m.group(1)]}"><figcaption>{m.group(2)}</figcaption></figure>',
         raw, flags=re.S)
+    # caption updates from Alex (Nov 2026)
+    raw = raw.replace("<p>Seneca Biopharma</p>", "<p>Seneca Biopharma (ticker SNCA), later acquired by Palisade Bio</p>")
     raw = raw.replace("<h4>FLAGGED LOGOS</h4>", '<h3 class="eyebrow flagged">Flagged logos</h3>')
     # the image build already resizes and compresses everything
     raw = raw.replace(" (FILL IN: re-export this image smaller; it’s 776 KB)", "")
