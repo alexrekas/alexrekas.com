@@ -1,0 +1,4 @@
+# Source bundle stays local until Alex confirms it can go in a public repo
+_source/
+node_modules/
+.DS_Store
