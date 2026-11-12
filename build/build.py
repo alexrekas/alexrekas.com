@@ -41,8 +41,11 @@ PREVIEW = True  # set False at launch: removes noindex
 BASE_PATH = "/alexrekas.com/" if PREVIEW else "/"
 
 SOCIAL = {
-    "LinkedIn": None,  # (FILL IN) – URL not in the source bundle yet
-    "Dribbble": None,
+    "LinkedIn": "https://www.linkedin.com/in/alexrekas",
+    "Dribbble": "https://dribbble.com/alexrekas",
+    "GitHub": "https://github.com/alexrekas",
+    "Instagram": "https://www.instagram.com/aprekas",
+    "X": "https://x.com/aprekas",
 }
 
 WIDTHS = [640, 1200, 2000]
@@ -208,7 +211,7 @@ def footer():
     links = []
     for label, href in SOCIAL.items():
         if href:
-            links.append(f'<li><a href="{href}" rel="me noopener">{label}</a></li>')
+            links.append(f'<li><a href="{href}" rel="me">{label}</a></li>')
         else:
             links.append(f'<li><mark class="fill">Fill in: {label} URL</mark></li>')
     links.append('<li><a href="/privacy/">Privacy</a></li>')
