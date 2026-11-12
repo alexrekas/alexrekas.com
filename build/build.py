@@ -198,7 +198,7 @@ def header(url):
         items.append(f'<li><a href="{href}"{cur}>{label}</a></li>')
     return (
         '<header class="site-header"><div class="wrap">'
-        '<a class="brand" href="/">Alex Rekas</a>'
+        '<a class="brand" href="/"><svg class="brand-mark" viewBox="0 0 165.37 144" aria-hidden="true" focusable="false"><path fill="currentColor" d="M165.37,46.66A46.64,46.64,0,0,0,118.66,0H64L0,144H165.37L140.44,87.93A46.58,46.58,0,0,0,165.37,46.66ZM140.71,128H95.53L82.66,99.05,69.79,128H24.66L74.43,16h44.23A30.65,30.65,0,0,1,133,73.8l-13.23,7,6.08,13.67Z"/></svg><span class="visually-hidden">Alex Rekas, home</span></a>'
         f'<nav aria-label="Main"><ul>{"".join(items)}</ul></nav>'
         "</div></header>"
     )
