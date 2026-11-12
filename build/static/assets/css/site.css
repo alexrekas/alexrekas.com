@@ -290,3 +290,33 @@ mark.review { display: inline-block; margin-top: 6px; font-size: 12px; line-heig
 .contact-line { margin: 8px 0 0; }
 .resume .footnote { font-size: 15px; color: var(--muted); }
 @media (min-width: 641px) { .skills > div { grid-template-columns: 160px minmax(0, 1fr); } }
+
+/* ---------- framed screenshots (x-shot) ---------- */
+.shot-tile {
+  display: flex; align-items: center; justify-content: center;
+  padding: clamp(20px, 5vw, 64px); background: var(--tile); border-radius: 18px;
+}
+.case .shot picture img { background: none; border-radius: 0; }
+.frame-browser {
+  width: 100%; overflow: hidden; border-radius: 12px; background: #FFFFFF;
+  box-shadow: 0 1px 0 rgba(255,255,255,.06) inset, 0 24px 60px rgba(0,0,0,.45);
+}
+.frame-bar { position: relative; display: flex; gap: 6px; align-items: center; height: 30px; padding: 0 12px; background: #2A2C31; }
+.frame-bar span { width: 9px; height: 9px; border-radius: 50%; background: #4A4D54; }
+.frame-bar i { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 36%; height: 14px; border-radius: 7px; background: #383B41; }
+.frame-browser img { width: 100%; }
+.frame-phone {
+  width: min(100%, 300px); overflow: hidden; border: 8px solid #2A2C31; border-radius: 40px; background: #000;
+  box-shadow: 0 24px 60px rgba(0,0,0,.45);
+}
+.frame-phone img { width: 100%; border-radius: 32px; }
+.frame-none { width: 100%; }
+.frame-none img { width: 100%; border-radius: 10px; }
+.shot-phone .shot-tile { padding-block: clamp(28px, 5vw, 56px); }
+@media (max-width: 640px) {
+  .frame-bar { height: 22px; padding: 0 9px; gap: 4px; }
+  .frame-bar span { width: 6px; height: 6px; }
+  .frame-bar i { height: 10px; }
+  .frame-phone { border-width: 6px; border-radius: 30px; }
+  .frame-phone img { border-radius: 24px; }
+}

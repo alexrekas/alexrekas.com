@@ -124,7 +124,27 @@ def parse_attrs(s):
 
 
 # ---------------------------------------------------------------- expansions
+def render_shot(a):
+    """A raw screenshot presented on the standard tile, in a browser or phone frame.
+
+    <x-shot src="raw.png" alt="..." frame="browser|phone|none" [caption="..."] [sizes="..."]>
+    The frame is drawn in CSS, so every case study gets identical framing.
+    """
+    frame = a.get("frame", "browser")
+    img = render_img({k: v for k, v in a.items() if k not in ("frame", "caption")})
+    if frame == "browser":
+        inner = ('<div class="frame-browser"><div class="frame-bar" aria-hidden="true">'
+                 '<span></span><span></span><span></span><i></i></div>' + img + "</div>")
+    elif frame == "phone":
+        inner = f'<div class="frame-phone">{img}</div>'
+    else:
+        inner = f'<div class="frame-none">{img}</div>'
+    cap = f"<figcaption>{a['caption']}</figcaption>" if a.get("caption") else ""
+    return f'<figure class="shot shot-{frame}"><div class="shot-tile">{inner}</div>{cap}</figure>'
+
+
 def expand(body):
+    body = re.sub(r"<x-shot\b([^>]*)>", lambda m: render_shot(parse_attrs(m.group(1))), body)
     body = re.sub(r"<x-img\b([^>]*)>", lambda m: render_img(parse_attrs(m.group(1))), body)
     body = re.sub(
         r"<x-todo>(.*?)</x-todo>",
