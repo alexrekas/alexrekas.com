@@ -95,15 +95,12 @@ ALT = {
     "4219": "Line drawings comparing arm positions: A, a standard watch requires twisting the wrist; B, ERGO reads with the arm in its natural position.",
 }
 
+# pollen-productions.html is now edited by hand (Nov 2026 restructure); How Much? was removed.
 PAGES = {
     "cdc": dict(title="CDC Public Health Law", next=("Major CRE Firm", "/portfolio/cre-crm/"),
                 desc="CDC Public Health Law: Alex Rekas ran a two-week heuristic evaluation of the Public Health Law section of cdc.gov, rating every issue by severity."),
-    "cre-crm": dict(title="Major CRE Firm", next=("How Much?", "/portfolio/how-much/"),
+    "cre-crm": dict(title="Major CRE Firm", next=("Pollen Productions", "/portfolio/pollen-productions/"),
                     desc="Major CRE Firm: Alex Rekas mapped a debt-transaction workflow into an enterprise CRM through stakeholder interviews, interactive wireframes and a prioritized backlog."),
-    "how-much": dict(title="How Much?", next=("Pollen Productions", "/portfolio/pollen-productions/"),
-                     desc="How Much?: a single-page wedding video quote tool for watchPVK, designed by Alex Rekas, where the price updates as you answer."),
-    "pollen-productions": dict(title="Pollen Productions", next=("CrossFit Metropolis", "/portfolio/crossfit-metropolis/"),
-                               desc="Pollen Productions: brand, art direction and a subscription store for a floral designer, by Alex Rekas."),
     "crossfit-metropolis": dict(title="CrossFit Metropolis", next=("Extras", "/portfolio/extras/"),
                                 desc="CrossFit Metropolis: Alex Rekas redesigned a New York City gym's website around the workout of the day, a simple sign-up path and professional photography."),
     "extras": dict(title="Extras", next=("SNOWATCH", "/portfolio/snowatch/"),

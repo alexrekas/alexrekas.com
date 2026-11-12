@@ -292,7 +292,22 @@ def case_study(meta, body):
     )
 
 
+def redirect_page(meta):
+    to = meta["redirect"]
+    return (
+        '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
+        '<meta name="robots" content="noindex">\n'
+        f'<title>Moved · Alex Rekas</title>\n<link rel="canonical" href="{SITE_URL}{to}">\n'
+        f'<meta http-equiv="refresh" content="0; url={to}">\n</head>\n'
+        f'<body><p>This project has been retired. <a href="{to}">See all work</a>.</p></body>\n</html>\n'
+    )
+
+
 def render(meta, body):
+    if meta.get("redirect"):
+        doc = relativize(redirect_page(meta), meta["url"])
+        href = re.search(r'<a href="([^"]*)"', doc).group(1)
+        return re.sub(r'content="0; url=[^"]*"', f'content="0; url={href}"', doc)
     if meta.get("template") == "case":
         body = case_study(meta, body)
     main_cls = f' class="{meta["main_class"]}"' if meta.get("main_class") else ""

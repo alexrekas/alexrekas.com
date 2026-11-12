@@ -276,3 +276,14 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--text-2); }
 mark.review { display: inline-block; margin-top: 6px; font-size: 12px; line-height: 1.5; }
 .case .on-dark img { background: #000; padding: 24px; }
 .flagged { margin: 48px 0 8px; }
+
+/* alternating text + photo rows (Pollen Productions) */
+.steps { display: flex; flex-direction: column; gap: 64px; }
+.step { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+.step:first-child { grid-template-columns: minmax(0, 1fr); }
+.step:nth-child(odd) > figure { order: -1; }
+.step .section-text { margin: 0; }
+@media (max-width: 800px) {
+  .step { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .step:nth-child(odd) > figure { order: 0; }
+}

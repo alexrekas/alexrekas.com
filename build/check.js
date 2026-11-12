@@ -64,6 +64,15 @@ function allPages() {
     page.on("response", (r) => { if (r.status() >= 400 && r.url().startsWith(origin)) failed.push(r.url()); });
     for (const p of pages) {
       failed.length = 0;
+      const html = fs.readFileSync(path.join(DOCS, p.endsWith(".html") ? p : p + "index.html"), "utf8");
+      const refresh = html.match(/http-equiv="refresh" content="0; url=([^"]+)"/);
+      if (refresh) {
+        // redirect stubs: only check the target exists
+        const target = new URL(refresh[1], `${origin}${BASE}/${p}`).pathname;
+        if (resolveFile(target)) console.log(`✓ [${vp.name}] /${p} → ${target.slice(BASE.length)}`);
+        else { problems++; console.log(`✗ [${vp.name}] /${p} redirects to missing ${target}`); }
+        continue;
+      }
       const url = `${origin}${BASE}/${p}`;
       await page.goto(url, { waitUntil: "load" });
       // force lazy images to load
