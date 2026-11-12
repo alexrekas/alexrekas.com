@@ -12,6 +12,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "_source" / "source-bundle" / "content"
 MEDIA = json.loads((CONTENT / "media.json").read_text())
+# images Alex sent later (files live in build/img-src/)
+MEDIA["900001"] = {"file": "img-src/ideacrew-logo-concepts.png"}
 OUT = ROOT / "build" / "pages" / "portfolio"
 
 ALT = {
@@ -58,6 +60,7 @@ ALT = {
     "5648": "Alex Rekas's personal monogram mark in white on black, with the mark shown on a cap and a T-shirt.",
     "5645": "A CDC logo concept: a white bracketed mark above the words Centers for Disease Control & Prevention, on blue.",
     "5646": "Four IdeaCrew wordmark variations in black and white.",
+    "900001": "Four IdeaCrew logo concepts: a blue open-circle mark with a geometric sans wordmark, a split-C mark with a serif wordmark, a lightbulb mark with a bold serif wordmark, and an interlocking-bracket mark with a monospace wordmark.",
     "5402": "The RegSearch wordmark in white on deep purple.",
     "5647": "The WorkRadar wordmark in white on dark navy.",
     "5649": "The Enroll App logo: a blue EA monogram beside the words Enroll App.",
@@ -202,7 +205,7 @@ def convert(slug):
         q = '[vc_column width="1/4"]'
         lines[i:i] = [
             q + '[vc_single_image image="5645"]<p>CDC logo concept</p>'
-            + q + '[vc_single_image image="5646"]<p>IdeaCrew (FILL IN: send the newer IdeaCrew logo image)</p>'
+            + q + '[vc_single_image image="900001"]<p>IdeaCrew logo concepts</p>'
             + q + '[vc_single_image image="5402"]<p>RegSearch</p>'
             + q + '[vc_single_image image="5647"]<p>WorkRadar</p>',
             q + '[vc_single_image image="5649"]<p>Enroll App (FILL IN: send the updated Enroll App logo)</p>'
