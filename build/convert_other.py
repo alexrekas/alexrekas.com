@@ -56,7 +56,7 @@ ALT = {
     "5191": "Sunset Taco logo: script lettering on a half-circle sunset gradient.",
     "5644": "Pizza King logo: a yellow crown shaped like a pizza slice above yellow italic lettering.",
     "5648": "Alex Rekas's personal monogram mark in white on black, with the mark shown on a cap and a T-shirt.",
-    "5645": "The CDC logo in white on blue with the words Centers for Disease Control & Prevention.",
+    "5645": "A CDC logo concept: a white bracketed mark above the words Centers for Disease Control & Prevention, on blue.",
     "5646": "Four IdeaCrew wordmark variations in black and white.",
     "5402": "The RegSearch wordmark in white on deep purple.",
     "5647": "The WorkRadar wordmark in white on dark navy.",
@@ -197,6 +197,21 @@ def convert(slug):
         r'<div><img src="[^"]*/([^"/]+)"[^>]*></div><p>(<mark class="fill review">.*?</mark>)</p>',
         lambda m: f'<figure class="on-dark"><x-img src="{m.group(1)}" alt="{ALT[m.group(1)]}"><figcaption>{m.group(2)}</figcaption></figure>',
         raw, flags=re.S)
+    if slug == "extras":
+        # Alex's answers on the flagged logos (Nov 2026): all kept, so they join the logo grid
+        flagged = ("personal mark", "FLAGGED LOGOS", 'image="5645"', 'image="5647"')
+        lines = [l for l in raw.split("\n") if not any(f in l for f in flagged)]
+        i = next(n for n, l in enumerate(lines) if 'image="5644"' in l) + 1
+        q = '[vc_column width="1/4"]'
+        lines[i:i] = [
+            q + '[vc_single_image image="5645"]<p>CDC logo concept</p>'
+            + q + '[vc_single_image image="5646"]<p>IdeaCrew (FILL IN: send the newer IdeaCrew logo image)</p>'
+            + q + '[vc_single_image image="5402"]<p>RegSearch</p>'
+            + q + '[vc_single_image image="5647"]<p>WorkRadar</p>',
+            q + '[vc_single_image image="5649"]<p>Enroll App (FILL IN: send the updated Enroll App logo)</p>'
+            + q + '[vc_single_image image="5648"]<p>My personal mark</p>' + q + q,
+        ]
+        raw = "\n".join(lines)
     # caption updates from Alex (Nov 2026)
     raw = raw.replace("<p>Seneca Biopharma</p>", "<p>Seneca Biopharma (ticker SNCA), later acquired by Palisade Bio</p>")
     raw = raw.replace("<h4>FLAGGED LOGOS</h4>", '<h3 class="eyebrow flagged">Flagged logos</h3>')
