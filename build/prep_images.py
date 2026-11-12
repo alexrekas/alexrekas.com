@@ -128,6 +128,14 @@ SHARES = [
     ("default", "Alex Rekas", None, "Design Lead and Product Designer"),
     ("home", "Product design for complex, high-stakes software.", None, "Alex Rekas · Design Lead and Product Designer, Richmond, VA"),
     ("workradar", "WorkRadar", "workradar-00-hero-v2.png", "Daily check-ins for a safe return to the office"),
+    ("enroll-app", "Enroll App", "enroll-newemployer-05-phones-dark.png", "Health coverage enrollment, rebuilt mobile-first"),
+    ("vitae-27", "Vitae 27", None, "One system for three state marketplace brands, built by directing an AI coding agent"),
+    ("regsearch", "RegSearch", "regsearch-new3.png", "Federal procurement regulations, actually searchable"),
+    ("takecare", "TakeCare", "TakeCare-logo.png", "A wellness brand for Marriott's global workforce"),
+    ("ideacrew-rebrand", "IdeaCrew Rebrand", None, "Leading IdeaCrew's 2026 rebrand, from first concepts through launch"),
+    ("work", "Work", None, "Product design case studies by Alex Rekas"),
+    ("about", "About Alex Rekas", None, "Design Lead and Product Designer in Richmond, VA"),
+    ("resume", "Alex Rekas", None, "Resume · Design Lead | Senior Product/UX Designer"),
 ]
 
 if __name__ == "__main__":
