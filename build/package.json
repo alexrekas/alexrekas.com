@@ -1,0 +1,10 @@
+{
+  "name": "alexrekas-site-build",
+  "private": true,
+  "description": "Build helpers for alexrekas.com (fonts, checks). The site itself is static HTML in /docs.",
+  "devDependencies": {
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/ibm-plex-sans": "^5.3.0",
+    "axe-core": "^4.14.0"
+  }
+}
