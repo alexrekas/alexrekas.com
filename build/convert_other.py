@@ -69,8 +69,8 @@ ALT = {
     "5189": "Liz & Matt save-the-date card with a watercolor mountain lake, Glen Wild Lake, Bloomingdale, NJ.",
     "4538": "Three bottles of men's body wash and hair wash in yellow, teal and gray packaging.",
     "4537": "Pencil sketches of a process, with arrows showing materials pressed, rolled and cut.",
-    "4535": "Rendered white soccer boots with a Nike swoosh, shown from the side and from below.",
-    "4536": "Rendered black soccer boots with three white Adidas stripes, shown from the side and from below.",
+    "4535": "Concept rendering of white soccer boots with a Nike swoosh, shown from the side and from below.",
+    "4536": "Concept rendering of black soccer boots with three white Adidas stripes, shown from the side and from below.",
     # BEN
     "168": "A student sitting on the BEN bench, a pale wooden bench with a floating seat inside an outer frame.",
     "5389": "A sheet of De Stijl centenary stamps with primary-color compositions and Mondrian-style grids.",
@@ -212,6 +212,9 @@ def convert(slug):
             + q + '[vc_single_image image="5648"]<p>My personal mark</p>' + q + q,
         ]
         raw = "\n".join(lines)
+    # soccer boots: Alex confirmed both are his own concept drawings
+    raw = re.sub(r"<p>Soccer boot</p>\s*<p><mark class=\"fill review\">Review: Shows (Nike|Adidas) branding\..*?</mark></p>",
+                 r"<p>Soccer boot concept</p>", raw, flags=re.S)
     # caption updates from Alex (Nov 2026)
     raw = raw.replace("<p>Seneca Biopharma</p>", "<p>Seneca Biopharma (ticker SNCA), later acquired by Palisade Bio</p>")
     raw = raw.replace("<h4>FLAGGED LOGOS</h4>", '<h3 class="eyebrow flagged">Flagged logos</h3>')
