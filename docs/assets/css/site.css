@@ -221,3 +221,44 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--text-2); }
 .narrow img { border-radius: 16px; }
 .case-tiled .before-after img, .case-tiled .hero img { padding: 0; }
 .case .on-white img { background: #FFFFFF; }
+
+/* ---------- work index ---------- */
+.work-group { padding-top: 64px; }
+.work-group h2 { margin-bottom: 24px; }
+.work-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 40px 24px; }
+.work-tile { position: relative; }
+.work-media { aspect-ratio: 1; border-radius: 16px; overflow: hidden; background: var(--tile); margin-bottom: 16px; }
+.work-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.work-media .todo-box { height: 100%; min-height: 0; border-radius: 16px; }
+.work-tile:hover .work-media img { transform: scale(1.02); }
+.work-tile h3 { font-size: 20px; margin-bottom: 4px; }
+.work-tile h3 a { color: var(--text); text-decoration: none; }
+.work-tile h3 a::after { content: ""; position: absolute; inset: 0; border-radius: 16px; }
+.work-tile h3 a:focus-visible { outline: none; }
+.work-tile:focus-within { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 16px; }
+.work-tile:hover h3 a { color: var(--accent); }
+.work-tile p { margin: 0; color: var(--muted); font-size: 15px; }
+.work-tile .years { margin-top: 4px; font-family: var(--mono); font-size: 12px; letter-spacing: .04em; }
+
+/* ---------- about / resume ---------- */
+.about-main { padding-top: 64px; }
+.resume-head { display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: flex-end; justify-content: space-between; max-width: none; }
+.resume-head .lede { margin: 0; }
+.button { display: inline-flex; gap: 8px; align-items: center; padding: 10px 18px; border: 1px solid var(--accent); border-radius: 999px; text-decoration: none; font-weight: 500; }
+.button:hover { background: var(--accent); color: var(--bg); }
+.resume section { padding-top: 48px; }
+.resume section:first-child { padding-top: 0; }
+.resume .eyebrow { margin: 0 0 16px; font-size: 12px; }
+.resume .job { margin-bottom: 32px; }
+.resume .job h3 { font-size: 20px; margin: 0 0 4px; }
+.resume .job h3 a { color: var(--text); }
+.resume .sep { color: var(--muted); }
+.resume .when { font-family: var(--mono); font-size: 13px; color: var(--muted); margin: 0 0 12px; }
+.resume h4 { font-size: 16px; font-weight: 600; margin: 20px 0 6px; }
+.resume ul { margin: 0; padding-left: 20px; }
+.resume li { margin-bottom: 6px; }
+.skills { margin: 0; display: grid; gap: 14px; }
+.skills > div { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 16px; }
+.skills dt { font-weight: 600; }
+.skills dd { margin: 0; color: var(--text-2); }
+@media (max-width: 640px) { .skills > div { grid-template-columns: 1fr; gap: 2px; } }
