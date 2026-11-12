@@ -276,3 +276,6 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--text-2); }
 mark.review { display: inline-block; margin-top: 6px; font-size: 12px; line-height: 1.5; }
 .case .on-dark img { background: #000; padding: 24px; }
 .flagged { margin: 48px 0 8px; }
+.contact-line { margin: 8px 0 0; }
+.resume .footnote { font-size: 15px; color: var(--muted); }
+@media (min-width: 641px) { .skills > div { grid-template-columns: 160px minmax(0, 1fr); } }
