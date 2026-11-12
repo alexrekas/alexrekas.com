@@ -35,7 +35,22 @@ def gray_logo(src_name, out_name):
     return out.size
 
 
+ENROLL = [
+    "enroll-newemployer-01-hero.png",
+    "enroll-newemployer-01b-personal.png",
+    "enroll-newemployer-02-business.png",
+    "enroll-newemployer-03-communication.png",
+    "enroll-newemployer-04-complete.png",
+    "enroll-newemployer-05-phones.png",
+]
+
 if __name__ == "__main__":
+    import sys
+    sys.path.insert(0, str(ROOT / "build"))
+    from retile import retile, swap_flat
+    for name in ENROLL:
+        retile(SRC / name, OUT / name.replace(".png", "-dark.png"))
+    swap_flat(SRC / "enroll-newemployer-userflow.png", OUT / "enroll-newemployer-userflow-dark.png")
     for s, o in [
         ("trustedby-marriott2.png", "logo-marriott.png"),
         ("ar-trustedBrands-CDC.png", "logo-cdc.png"),

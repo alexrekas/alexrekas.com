@@ -98,7 +98,7 @@ mark.fill {
 
 /* ---------- media tiles ---------- */
 figure { margin: 0; }
-.tile, .case figure > picture img, .case .hero img { background: var(--tile); border-radius: 16px; }
+.tile, .case picture img { background: var(--tile); border-radius: 16px; }
 figcaption { margin-top: 14px; font-size: 15px; color: var(--text-2); }
 .video video { width: 100%; border-radius: 16px; background: var(--tile); }
 
@@ -211,3 +211,13 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--text-2); }
 }
 
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+.before-after .kicker { margin-bottom: 12px; }
+.before-after img { border-radius: 16px; background: var(--tile); }
+.after-pair { margin-top: 40px; }
+.quote { margin: 32px 0 0; padding: 20px 24px; border-left: 2px solid var(--accent); background: var(--card); border-radius: 0 12px 12px 0; font-size: 19px; color: var(--text); }
+.closing .lede { margin-bottom: 16px; }
+.narrow { max-width: 400px; }
+.narrow img { border-radius: 16px; }
+.case-tiled .before-after img, .case-tiled .hero img { padding: 0; }
+.case .on-white img { background: #FFFFFF; }

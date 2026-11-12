@@ -1,0 +1,56 @@
+<!--{
+  "url": "/portfolio/vitae-27/",
+  "template": "case",
+  "title": "Vitae 27",
+  "description": "Vitae 27: Alex Rekas built a multi-brand system for IdeaCrew's Enroll platform by directing an AI coding agent, making the design decisions and reviewing every result while the agent wrote the code.",
+  "share": "assets/share/vitae-27.jpg",
+  "intro": "Vitae 27 is the design system behind IdeaCrew's Enroll platform, which runs health insurance marketplaces for Washington DC, Maine and Massachusetts. I built it by directing an AI coding agent: I made the design decisions and reviewed the output, and the agent wrote the code. One token set themes all three state brands in light and dark mode, and every change is checked for accessibility automatically.",
+  "role": "Design Lead",
+  "company": "IdeaCrew",
+  "services": ["Product design", "AI-assisted building", "Accessibility", "Design system"],
+  "years": "(FILL IN: year started)–present",
+  "hero_todo": "Hero — the same Enroll screen in the DC, Maine and Massachusetts brands, side by side",
+  "next": {"title": "WorkRadar", "url": "/portfolio/workradar/"}
+}-->
+<section class="section" aria-labelledby="s-brands">
+<div class="section-text">
+<h2 id="s-brands">One system, three brands</h2>
+<p>Each state marketplace has its own brand, but they all run on the same product. Instead of maintaining three sets of components, Vitae 27 uses one token set for color, type and spacing that switches between the DC, Maine and Massachusetts brands, each in light and dark mode. A fix made once shows up in every market.</p>
+</div>
+<div class="pair">
+<figure><x-todo>One component in light and dark mode for each brand (a 3×2 grid)</x-todo><figcaption>One token set, three brands, light and dark.</figcaption></figure>
+<figure><x-todo>Token table: color, type and spacing values per brand</x-todo><figcaption>Brands differ only in their tokens.</figcaption></figure>
+</div>
+</section>
+
+<section class="section" aria-labelledby="s-pipeline">
+<div class="section-text">
+<h2 id="s-pipeline">From Figma to production</h2>
+<p>The system runs in one line from Figma to Storybook to the Rails components engineers ship. I directed an AI coding agent to build that pipeline and the components in it. My job was the part that needs a designer: deciding what each component should do, writing the rules, and reviewing every result against the Figma source before it shipped.</p>
+</div>
+<figure><x-todo>Figma component beside its Storybook page</x-todo><figcaption>Figma is the source; Storybook shows what ships.</figcaption></figure>
+</section>
+
+<section class="section" aria-labelledby="s-a11y">
+<div class="section-text">
+<h2 id="s-a11y">Accessibility on every change</h2>
+<p>WCAG 2.1 AA checks and visual-regression tests run automatically in CI. If a change breaks contrast, focus states or layout in any brand, it's caught before it reaches a state's marketplace.</p>
+</div>
+<div class="pair">
+<figure><x-todo>A CI run showing accessibility and visual-regression checks passing</x-todo><figcaption>Every change is checked before it ships.</figcaption></figure>
+<figure><x-todo>A visual-regression diff highlighting a caught change</x-todo><figcaption>Layout changes get flagged before they reach a state.</figcaption></figure>
+</div>
+</section>
+
+<section class="section" aria-labelledby="s-agent">
+<div class="section-text">
+<h2 id="s-agent">What directing an agent taught me</h2>
+<p>(FILL IN: 2–3 sentences: what you had to specify carefully, where the agent needed correcting, and where your judgment mattered most. A concrete example works best.)</p>
+</div>
+</section>
+
+<section class="section closing">
+<div class="section-text">
+<p class="lede">Vitae 27 is moving into IdeaCrew's own repository, where it will be the foundation for every Enroll market. (FILL IN: update once the move is done)</p>
+</div>
+</section>

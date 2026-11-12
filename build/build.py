@@ -261,8 +261,8 @@ def head(meta):
 
 def case_study(meta, body):
     rows = []
-    for label in ("Role", "Company", "Services", "Years"):
-        v = meta.get(label.lower())
+    pairs = meta.get("rows") or [(l, meta.get(l.lower())) for l in ("Role", "Company", "Team", "Services", "Years")]
+    for label, v in pairs:
         if not v:
             continue
         if isinstance(v, list):
