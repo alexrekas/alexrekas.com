@@ -215,6 +215,13 @@ def convert(slug):
     # soccer boots: Alex confirmed both are his own concept drawings
     raw = re.sub(r"<p>Soccer boot</p>\s*<p><mark class=\"fill review\">Review: Shows (Nike|Adidas) branding\..*?</mark></p>",
                  r"<p>Soccer boot concept</p>", raw, flags=re.S)
+    # Alex's keep/remove answers (Nov 2026)
+    if slug == "crossfit-metropolis":
+        # the gym's own logo, not Alex's work
+        raw = "\n".join(l for l in raw.split("\n") if 'image="4963"' not in l)
+    kept = ("Title graphic", "Photos of a ski racer", "Snowboarder on a mountain", "Stock photo of a runner", "Product photo of a TomTom")
+    raw = re.sub(r'(?:<p>|<figcaption>)<mark class="fill review">Review: (?:' + "|".join(map(re.escape, kept)) + r').*?</mark>(?:</p>|</figcaption>)',
+                 "", raw, flags=re.S)
     # caption updates from Alex (Nov 2026)
     raw = raw.replace("<p>Seneca Biopharma</p>", "<p>Seneca Biopharma (ticker SNCA), later acquired by Palisade Bio</p>")
     raw = raw.replace("<h4>FLAGGED LOGOS</h4>", '<h3 class="eyebrow flagged">Flagged logos</h3>')
