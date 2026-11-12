@@ -286,8 +286,8 @@ def case_study(meta, body):
     return (
         '<article class="case">'
         f'<header class="case-intro"><h1>{meta["h1"] if "h1" in meta else meta["title"]}</h1>'
-        f'<p class="lede">{meta["intro"]}</p></header>'
-        f'<dl class="meta">{"".join(rows)}</dl>'
+        f'<div class="case-head"><p class="lede">{meta["intro"]}</p>'
+        f'<dl class="meta">{"".join(rows)}</dl></div></header>'
         f"{hero}{body}{next_html}</article>"
     )
 

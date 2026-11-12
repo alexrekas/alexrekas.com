@@ -100,7 +100,7 @@ mark.fill {
 /* ---------- media tiles ---------- */
 figure { margin: 0; }
 .tile, .case picture img { background: var(--tile); border-radius: 16px; }
-figcaption { margin-top: 14px; font-size: 15px; color: var(--text-2); }
+figcaption { margin-top: 12px; font-size: 14px; color: var(--muted); }
 .video video { width: 100%; border-radius: 16px; background: var(--tile); }
 
 /* ---------- home ---------- */
@@ -160,17 +160,22 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--text-2); }
 .contact a { font-size: 20px; }
 
 /* ---------- case study ---------- */
-.case-intro { padding: 64px 0 40px; max-width: 820px; }
-.case-intro h1 { margin-bottom: 28px; font-size: clamp(40px, 5vw, 60px); line-height: 1.05; letter-spacing: -.02em; }
+.case-intro { padding: 56px 0 72px; }
+.case-intro h1 { margin-bottom: 56px; font-size: clamp(44px, 7.4vw, 100px); font-weight: 400; line-height: 1.04; letter-spacing: -.035em; }
+/* intro left, project facts right */
+.case-head { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 32px 64px; align-items: start; }
 .lede { font-size: 19px; color: #D4D6DA; margin: 0; }
-.meta { margin: 0 0 48px; max-width: 820px; display: grid; row-gap: 14px; }
-.meta > div { display: grid; grid-template-columns: 140px minmax(0, 1fr); column-gap: 24px; align-items: center; }
+.meta { margin: 0; display: grid; row-gap: 14px; }
+.meta > div { display: grid; grid-template-columns: 96px minmax(0, 1fr); column-gap: 20px; align-items: baseline; }
 .meta dd { margin: 0; }
 .case .hero img { border-radius: 18px; }
 
 .section { padding-top: var(--section); }
-.section-text { max-width: 760px; margin-bottom: 40px; }
-.section-text h2 { margin-bottom: 16px; font-size: 30px; line-height: 1.25; }
+/* section name left, short copy right */
+.section-text { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); column-gap: 64px; margin-bottom: 48px; }
+.section-text > * { grid-column: 2; }
+.section-text > h2 { grid-column: 1; grid-row: 1 / span 20; }
+.section-text h2 { margin: 0 0 16px; font-size: 26px; line-height: 1.25; }
 .section-text p { color: var(--text-2); }
 .figs { display: flex; flex-direction: column; gap: 40px; }
 .pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 32px; }
@@ -205,6 +210,12 @@ figcaption { margin-top: 14px; font-size: 15px; color: var(--text-2); }
   .next-title { font-size: 24px; }
   .logos { gap: 24px 36px; }
   .logos img { height: calc(var(--h, 44px) * .8); }
+}
+
+@media (max-width: 860px) {
+  .case-head, .section-text { grid-template-columns: minmax(0, 1fr); }
+  .section-text > *, .section-text > h2 { grid-column: 1; grid-row: auto; }
+  .case-intro h1 { margin-bottom: 32px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
