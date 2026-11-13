@@ -111,6 +111,14 @@ function allPages() {
   }
   await browser.close();
   server.close();
+  // HTML validity: browsers forgive broken markup, so check it explicitly
+  try {
+    require("child_process").execFileSync(path.join(__dirname, "node_modules", ".bin", "html-validate"), ["--config", path.join(__dirname, ".htmlvalidate.json"), path.join(DOCS, "**", "*.html")], { stdio: "pipe" });
+    console.log("✓ HTML validates");
+  } catch (e) {
+    problems++;
+    console.log("✗ HTML validation\n" + (e.stdout || "").toString().trim());
+  }
   console.log(problems ? `\n${problems} problem(s)` : "\nAll checks passed");
   process.exit(problems ? 1 : 0);
 })();
