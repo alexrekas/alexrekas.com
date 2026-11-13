@@ -423,3 +423,13 @@ html[data-lens="achroma"] .case picture img, html[data-lens="achroma"] .case vid
   .lens-button, .lens-panel { background: rgba(30,32,36,.97); }
 }
 @media print { .lens { display: none; } }
+
+/* ---------- mini golf (404) ---------- */
+.golf { max-width: 960px; padding: 48px 0 24px; }
+.golf[hidden] { display: none; }
+.golf-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; margin-bottom: 16px; font-family: var(--mono); font-size: 13px; color: var(--text-2); }
+.golf-bar h2 { margin: 0; }
+.golf-bar .golf-reset { margin-left: auto; padding: 8px 14px; font: 500 13px/1 var(--sans); background: none; cursor: pointer; }
+.golf-green canvas { display: block; margin: 0 auto; width: 100%; border-radius: 26px; touch-action: none; cursor: crosshair; }
+.golf-green canvas:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.golf-help { margin-top: 14px; font-size: 14px; color: var(--muted); }

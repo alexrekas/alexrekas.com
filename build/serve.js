@@ -11,7 +11,8 @@ const PORT = Number(process.argv[2] || 8080);
 const TYPES = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": "text/javascript", ".png": "image/png", ".jpg": "image/jpeg", ".webp": "image/webp", ".svg": "image/svg+xml", ".woff2": "font/woff2", ".pdf": "application/pdf", ".txt": "text/plain", ".xml": "application/xml", ".webmanifest": "application/manifest+json" };
 
 http.createServer((req, res) => {
-  let rel = decodeURIComponent(req.url.split("?")[0]);
+  // also accept the preview's /alexrekas.com/ prefix, which 404.html uses for its assets
+  let rel = decodeURIComponent(req.url.split("?")[0]).replace(/^\/alexrekas\.com(?=\/)/, "");
   let f = path.join(DOCS, rel);
   if (!f.startsWith(DOCS)) { res.writeHead(403); return res.end(); }
   if (fs.existsSync(f) && fs.statSync(f).isDirectory()) f = path.join(f, "index.html");
