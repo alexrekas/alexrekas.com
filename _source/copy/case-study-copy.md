@@ -54,7 +54,7 @@ People applying for coverage are often stressed, short on time, or reading in a 
 *Images:* Language switch open · Help line and TTY in the footer · The "I don't have a SSN" option
 
 **Accessible by default**
-The audit found federal accessibility violations, so patching screens one at a time wasn't going to work. I built WCAG 2.1 AA and Section 508 requirements into the design system's foundations: color, type, components and every interaction state. Focus, error and disabled states all meet contrast requirements, so any new screen built from the system starts out accessible instead of being fixed later. (FILL IN: confirm the contrast values, or a short line on how you checked them.)
+The audit found federal accessibility violations, so patching screens one at a time wasn't going to work. I built WCAG 2.1 AA and Section 508 requirements into the design system's foundations: color, type, components and every interaction state. Focus, error and disabled states all meet contrast requirements, so any new screen built from the system starts out accessible instead of being fixed later.
 
 *Images:* Close-ups of focus, error and disabled field states · Color and type tokens
 
@@ -81,7 +81,7 @@ WorkRadar helped employers decide when it was safe to bring people back to the o
 **Daily check-in**
 Every morning, employees answer two questions before coming in: have they been in close contact with someone with COVID-19 since their last screening, and do they have any of the listed symptoms. The questions are plain yes-or-no, based on CDC attestation guidance, and a summary lets people review and attest before they submit.
 
-Not everyone fits the main path. Guests can screen without an account, and anyone not working that day can say so and pick a reason, so managers aren't left guessing about missing check-ins.
+Not everyone fits the main path. Guests can screen without an account, and anyone not working that day can say so and pick a reason, so managers aren't left guessing about missing check-ins. I also wrote a user guide for each role, employees, guests and managers, to support rollout.
 
 *Images:* Home (last screening and Begin) · Symptoms question · Review and attest · Guest check-in
 
@@ -138,7 +138,9 @@ WCAG 2.1 AA checks and visual-regression tests run automatically in CI. If a cha
 *Images:* A CI run with checks passing · A visual-regression diff catching a change
 
 **Directing the agent**
-(FILL IN: 2–3 sentences in your own words. What you had to spell out carefully, where the agent got it wrong and how you caught it, and where your judgment mattered most. One concrete example is better than a general lesson.)
+The agent was fast, but it filled gaps with assumptions instead of checking the source. It told me our buttons had 4px and 8px corners; production used 6px, and I had just moved them to pills. It turned a guideline, aim for one call to action per page, into an automated check that failed pages that genuinely needed two. The instruction I gave most often became: look first. Check the production code, the Figma file or Lookbook before deciding how Enroll looks or behaves.
+
+My judgment mattered most where a check can't decide. In dark mode, the agent's blue turned the buttons almost gray. Of the options, I chose #24487A because it held up in a group of buttons, even though another looked better on its own. I kept bright green for call-to-action buttons only, and rather than add a border to make it work, we found the closest green to the logo that passes contrast with white text: #00884D.
 
 **What's next**
 Vitae 27 is moving into IdeaCrew's own repository, where it will be the foundation for every Enroll market. (FILL IN: update once the move is done.)
@@ -229,7 +231,7 @@ I wasn't involved in implementation, so I can't confirm which recommendations we
 **Tagline:** A wellness brand for Marriott's global workforce
 
 **Facts**
-- Years: (FILL IN: year)
+- Years: 2019
 - Company: Perphic
 - Client: Marriott International
 - Role: Product & UX Designer (contract)
@@ -287,7 +289,7 @@ No one on the platform side had worked with debt transactions before, so the fir
 **Wireframes tied to the backlog**
 I designed interactive wireframes inside the client's existing design system, and tagged every part of each screen with the backlog item that would build it. A developer could start from any requirement and find exactly where it lived in the design, and a stakeholder could see what each backlog item actually meant on screen.
 
-*Images:* Tagged wireframe (FILL IN: crop out the window title bar, which names the client) · The full set of debt wireframes
+*Images:* Tagged wireframe · The full set of debt wireframes
 
 **Beyond the scope**
 An experience audit of the existing CRM turned up usability problems outside the acquisition work. Those went into the backlog too, giving the client a roadmap for improvements beyond the immediate project.
@@ -359,6 +361,8 @@ Members check the site every day for the workout of the day; newcomers want to k
 **Photography that sells the feeling**
 Text alone couldn't carry the gym's culture, so the design leans on professional photography built around four themes: fitter New Yorkers, a program that works for me, a community a traditional gym doesn't offer, and health and happiness through fitness. The photography carried over into the gym's later marketing campaigns.
 
+Members said the new homepage felt cleaner and made it easier to find what they needed, though some longtime members needed time to adjust to the change.
+
 *Images:* (FILL IN: two or three photos from the shoot)
 
 ---
@@ -377,7 +381,7 @@ Marks for local businesses, a biotech company, sports teams and events, plus the
 Posters, save-the-dates and event pieces, from a hand-drawn chalkboard wreath to a Barcelona Pavilion exhibit poster.
 
 **Other**
-Packaging and product concepts, including soccer boot concepts. (FILL IN: what the process drawing shows)
+Packaging and product sketches, including soccer boot concepts I drew while applying for industrial design internships, to show I could draw.
 
 ---
 
@@ -386,7 +390,7 @@ Packaging and product concepts, including soccer boot concepts. (FILL IN: what t
 **Tagline:** A ski watch that fits over your jacket
 
 **Facts**
-- Years: (FILL IN: year)
+- Years: 2011
 - Context: Industrial design concept
 - Role: Designer
 
@@ -405,7 +409,7 @@ A flexible e-ink display stays readable through goggles, and buttons sized for t
 **Tagline:** A running watch you can read mid-stride
 
 **Facts**
-- Years: (FILL IN: year)
+- Years: 2011
 - Context: Industrial design concept
 - Role: Designer
 
@@ -424,15 +428,15 @@ With the face where the eyes already are, the time reads at a glance with the ar
 **Tagline:** A drinking fountain built for refilling bottles
 
 **Facts**
-- Years: (FILL IN: year)
-- Context: (FILL IN: class or project, and what the name refers to)
+- Years: 2010
+- Context: Industrial design concept
 - Role: Designer
 
 **Overview**
 Most drinking fountains make refilling a reusable bottle slow and awkward: you tilt the bottle, it never fills, and the stream is weak. LONDON is a concept fountain designed for refilling a bottle as well as taking a drink.
 
 **From observation to form**
-(FILL IN: two or three sentences on what you saw people do at fountains, then how the curved hood and bottle spout came out of the sketches.)
+Most drinking fountains I saw in parks had no real way to refill a bottle. Parks would be a better experience if more fountains let people refill a reusable bottle as easily as they take a drink. The sketches worked toward a single fountain that does both, with a curved hood and room underneath for a bottle.
 
 *Images:* Photos of people at fountains · Sketches · Final renderings
 
