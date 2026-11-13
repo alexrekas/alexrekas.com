@@ -324,13 +324,15 @@ mark.review { display: inline-block; margin-top: 6px; font-size: 12px; line-heig
 .filters[hidden] { display: none; }
 
 /* About: two-column lists (section name left, items right) */
-.about-list { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); column-gap: 64px; padding-top: var(--section); }
-.about-list h2 { font-size: 26px; line-height: 1.25; }
+/* same grid as the bio above: portrait column (240px) + 48px gap + text column (max 760px) */
+.about-list { display: grid; grid-template-columns: 240px minmax(0, 760px); column-gap: 48px; padding-top: 56px; }
+.about-main + .about-list { padding-top: 88px; }
+.about-list h2 { font-size: 20px; line-height: 1.6; padding-top: 4px; }
 .about-list ul { list-style: none; margin: 0; padding: 0; }
 .about-list li { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; padding: 14px 0; border-top: 1px solid var(--rule); }
 .about-list li:first-child { border-top: 0; padding-top: 4px; }
 .about-list .name { color: var(--text); }
 .about-list .detail { color: var(--muted); font-size: 15px; }
-@media (max-width: 860px) { .about-list { grid-template-columns: minmax(0, 1fr); row-gap: 16px; } }
+@media (max-width: 760px) { .about-list { grid-template-columns: minmax(0, 1fr); row-gap: 8px; padding-top: 48px; } }
 .about-list .detail a { color: var(--muted); }
 .about-list .detail a:hover { color: var(--text); }
