@@ -48,7 +48,7 @@ SOCIAL = {
     "X": "https://x.com/aprekas",
 }
 
-WIDTHS = [640, 1200, 2000]
+WIDTHS = [640, 1200, 1600, 2000, 2400]
 
 
 # ---------------------------------------------------------------- images
@@ -112,12 +112,16 @@ def render_img(attrs):
     eager = "eager" in attrs
     entries, fallback, w, h = make_variants(name)
     srcset = ", ".join(f"/{p} {tw}w" for p, tw in entries)
-    cls = f' class="{attrs["class"]}"' if attrs.get("class") else ""
+    # fit="contain" keeps the whole image (logos, wide screenshots) on the tile color;
+    # pos="50% 80%" sets object-position for cropped (cover) images
+    classes = " ".join(c for c in [attrs.get("class", ""), "fit-contain" if attrs.get("fit") == "contain" else ""] if c)
+    cls = f' class="{classes}"' if classes else ""
+    style = f' style="object-position: {html.escape(attrs["pos"], quote=True)}"' if attrs.get("pos") else ""
     loading = 'fetchpriority="high"' if eager else 'loading="lazy"'
     return (
         f'<picture><source type="image/webp" srcset="{srcset}" sizes="{sizes}">'
         f'<img src="/{fallback}" alt="{html.escape(alt, quote=True)}" width="{w}" height="{h}" '
-        f'{loading} decoding="async"{cls}></picture>'
+        f'{loading} decoding="async"{cls}{style}></picture>'
     )
 
 
@@ -399,6 +403,14 @@ def main():
         built.append(meta["url"])
         if not (meta.get("noindex") or meta.get("redirect")):
             indexable.append(meta["url"])
+    # remove generated images no page references any more (only when building every page)
+    if not only:
+        used = set()
+        for f in DOCS.rglob("*.html"):
+            used.update(re.findall(r"assets/img/([^\s\"',)]+)", f.read_text()))
+        for f in OUT_IMG.glob("*"):
+            if f.name not in used:
+                f.unlink()
     robots = DOCS / "robots.txt"
     sitemap = DOCS / "sitemap.xml"
     if PREVIEW:

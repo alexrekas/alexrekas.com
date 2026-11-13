@@ -48,8 +48,7 @@ if __name__ == "__main__":
     import sys
     sys.path.insert(0, str(ROOT / "build"))
     from retile import retile, swap_flat
-    for name in ENROLL:
-        retile(SRC / name, OUT / name.replace(".png", "-dark.png"))
+    # Enroll "-dark" images are now Alex's trimmed versions in build/img-src (session 2); don't regenerate them.
     swap_flat(SRC / "enroll-newemployer-userflow.png", OUT / "enroll-newemployer-userflow-dark.png")
     # client logos are now vector files: see build/mono_logos.py
 

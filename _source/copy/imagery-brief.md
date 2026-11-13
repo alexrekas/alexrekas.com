@@ -35,7 +35,7 @@ His approach is the opposite: **the canvas is the site's job, not the image's.**
 ## 2. What he does
 
 ### Work page thumbnails
-- **Tall cards (about 4:5)** on a light gray seamless background.
+- **Tall cards (443 × 560 at 1440px)** on a light gray seamless background, with a **square image** inset 8px and the text below it.
 - **One hero object per card:** a photoreal device render (iPhone, MacBook, iPad), or the physical product, **angled in 3D** (about 15–30° turn, slight tilt) with a soft contact shadow.
 - **The object fills 70–80% of the card** and sometimes bleeds off an edge. No frame, no border, no second background; the object sits directly on the card color.
 - **The screen shows the most colorful, recognizable state** of the product: a photo, a bright brand color, a big headline. Never a settings page.
@@ -92,15 +92,15 @@ Translate his recipe to your dark site, and apply it to every project so the gri
 
 | Slot | Shape | Export size | Notes |
 |---|---|---|---|
-| **Homepage card** (4 projects) | 3:2 landscape | 2400 × 1600 | Context photo, full bleed. Keep the bottom 25% calm for text. |
-| **Work page tile** (every project) | 4:5 portrait | 1600 × 2000 | Device render on `#1E2024` or transparent. |
+| **Homepage card** (4 projects) | 3:2 landscape | 2400 × 1600 | Context photo, full bleed. Measured: 1215 × 810 at 1440px. Keep the bottom 30% calm; the name, tagline and tags sit there on a dark shade. |
+| **Work page tile** (every project) | 1:1 square | 1600 × 1600 | Device render on `#1E2024` or transparent. Measured: his tile image is a square inset 8px inside a 40px-radius tile, with the text below it. |
 | **Case study hero** | about 16:9 | 2400 × 1350 | The same render or photo as the card, wider. |
 | **Desktop screen** | as designed | about 2880 wide (2x of 1440) | Raw UI, cropped to one moment. |
 | **Phone screen** | 390 × 844 at 2x | 780 × 1688 | Raw UI, no device frame. |
 | **Detail crop** | any | at least 1600 wide | A close-up of one component or state. |
 | **Recording** | as designed | MP4, muted, 20–30 s, under 5 MB | Plus a poster frame (PNG). |
 
-**Format changes this implies on the site** (I'll make them when the images arrive): homepage cards go from 16:10 to 3:2, and Work tiles go from square to 4:5 portrait, like his.
+**Measured on November 13, 2026 and now built:** homepage cards are a 3:2 carousel (1215 × 810 at 1440px, 16px radius, 40px gap). Work tiles are 40px-radius cards with a **square** image inset 8px and the name and tagline below it, in a 3-column grid with 16px gaps. The interim 4:5 tile images are fitted into the square until 1:1 renders replace them.
 
 ---
 

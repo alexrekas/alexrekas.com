@@ -9,38 +9,51 @@
 <h1>Product design for complex, high-stakes software.</h1>
 </section>
 
-<section aria-labelledby="featured-heading">
+<section class="featured">
+<div class="featured-head">
 <h2 id="featured-heading" class="visually-hidden">Featured work</h2>
-<ul class="cards">
-<li class="card">
-<div class="card-media"><x-img src="thumb-enroll.png" alt="Enroll App's new employer flow on a laptop, showing the Personal Information step." sizes="(min-width: 1248px) 588px, (min-width: 1100px) calc(50vw - 36px), calc(100vw - 32px)"></div>
-<div class="card-body">
-<div><h3><a href="/portfolio/enroll-app/">Enroll App</a></h3><p>Health coverage enrollment, rebuilt mobile-first</p></div>
+<div class="carousel-controls" hidden>
+<button class="carousel-prev" type="button" aria-controls="featured-track"><span class="visually-hidden">Previous project</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.5 5.5 8 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<button class="carousel-next" type="button" aria-controls="featured-track"><span class="visually-hidden">Next project</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.5 5.5 16 12l-6.5 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+</div>
+</div>
+<div class="carousel" role="region" aria-roledescription="carousel" aria-label="Featured work">
+<div class="carousel-track" id="featured-track">
+<div class="feature" role="group" aria-roledescription="slide" aria-label="1 of 4">
+<x-img src="thumb-enroll.png" alt="Enroll App's new employer flow on a laptop, showing the Personal Information step." sizes="(min-width: 1440px) 1215px, (min-width: 641px) calc(100vw - 112px), calc(100vw - 48px)" class="feature-img">
+<div class="feature-text">
+<h3 class="feature-name"><a href="/portfolio/enroll-app/">Enroll App</a></h3>
+<p class="feature-tagline">Health coverage enrollment, rebuilt mobile-first</p>
 <ul class="tags" aria-label="Tags"><li>Healthcare</li><li>Government</li><li>Accessibility</li></ul>
 </div>
-</li>
-<li class="card">
-<div class="card-media"><x-img src="thumb-workradar.png" alt="Two WorkRadar check-in results on phones: OK To Enter with a QR code, and STOP with next steps." sizes="(min-width: 1248px) 588px, (min-width: 1100px) calc(50vw - 36px), calc(100vw - 32px)"></div>
-<div class="card-body">
-<div><h3><a href="/portfolio/workradar/">WorkRadar</a></h3><p>Daily check-ins for a safe return to the office</p></div>
+</div>
+<div class="feature" role="group" aria-roledescription="slide" aria-label="2 of 4">
+<x-img src="workradar-tile-interim.png" alt="Two phones showing WorkRadar's check-in results: an all-green OK To Enter screen with a checkmark and QR code, and an all-red STOP screen." sizes="(min-width: 1440px) 1215px, (min-width: 641px) calc(100vw - 112px), calc(100vw - 48px)" fit="contain" class="feature-img">
+<div class="feature-text">
+<h3 class="feature-name"><a href="/portfolio/workradar/">WorkRadar</a></h3>
+<p class="feature-tagline">Daily check-ins for a safe return to the office</p>
 <ul class="tags" aria-label="Tags"><li>Workplace health</li><li>Mobile</li><li>Dashboard</li></ul>
 </div>
-</li>
-<li class="card">
-<div class="card-media padded"><x-img src="regsearch-new3.png" alt="The redesigned RegSearch document view for federal procurement regulations." sizes="(min-width: 1100px) 520px, calc(100vw - 96px)"></div>
-<div class="card-body">
-<div><h3><a href="/portfolio/regsearch/">RegSearch</a></h3><p>Federal procurement regulations, actually searchable</p></div>
+</div>
+<div class="feature" role="group" aria-roledescription="slide" aria-label="3 of 4">
+<x-img src="regsearch-new3.png" alt="The redesigned RegSearch document view for federal procurement regulations." sizes="(min-width: 1440px) 1215px, (min-width: 641px) calc(100vw - 112px), calc(100vw - 48px)" fit="contain" class="feature-img">
+<div class="feature-text">
+<h3 class="feature-name"><a href="/portfolio/regsearch/">RegSearch</a></h3>
+<p class="feature-tagline">Federal procurement regulations, actually searchable</p>
 <ul class="tags" aria-label="Tags"><li>Government</li><li>Search</li><li>Enterprise</li></ul>
 </div>
-</li>
-<li class="card">
-<div class="card-media"><x-img src="thumbnail400x400.png" alt="The CDC logo over a blue-tinted photo of a smiling child." sizes="(min-width: 1248px) 588px, (min-width: 1100px) calc(50vw - 36px), calc(100vw - 32px)"></div>
-<div class="card-body">
-<div><h3><a href="/portfolio/cdc/">CDC Public Health Law</a></h3><p>A usability review of cdc.gov's Public Health Law section</p></div>
+</div>
+<div class="feature" role="group" aria-roledescription="slide" aria-label="4 of 4">
+<x-img src="thumbnail400x400.png" alt="The CDC logo over a blue-tinted photo of a smiling child." sizes="(min-width: 1440px) 1215px, (min-width: 641px) calc(100vw - 112px), calc(100vw - 48px)" class="feature-img">
+<div class="feature-text">
+<h3 class="feature-name"><a href="/portfolio/cdc/">CDC Public Health Law</a></h3>
+<p class="feature-tagline">A usability review of cdc.gov's Public Health Law section</p>
 <ul class="tags" aria-label="Tags"><li>Heuristic evaluation</li><li>Information architecture</li><li>Public health</li></ul>
 </div>
-</li>
-</ul>
+</div>
+</div>
+</div>
+<p class="carousel-status visually-hidden" aria-live="polite"></p>
 <p class="see-all"><a href="/portfolio/">See all work <span aria-hidden="true">→</span></a></p>
 </section>
 
