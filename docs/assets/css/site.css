@@ -332,3 +332,5 @@ mark.review { display: inline-block; margin-top: 6px; font-size: 12px; line-heig
 .about-list .name { color: var(--text); }
 .about-list .detail { color: var(--muted); font-size: 15px; }
 @media (max-width: 860px) { .about-list { grid-template-columns: minmax(0, 1fr); row-gap: 16px; } }
+.about-list .detail a { color: var(--muted); }
+.about-list .detail a:hover { color: var(--text); }
