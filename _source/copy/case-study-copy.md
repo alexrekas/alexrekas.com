@@ -44,7 +44,7 @@ A large share of marketplace users only have a phone, and the old app didn't wor
 *Images:* Three phones: Personal Information, Business Information, Communication · The full seven-screen mobile flow
 
 **Eligibility results**
-(FILL IN: This is the moment your cover photo shows, so it's worth a section if you can share it. Two or three sentences: what someone sees when their results come back, what was confusing about the old version, and one decision you made. For example how you explained what they qualify for, or what to do next.)
+When an application is finished, the results screen tells people what they qualify for: whether they can shop for plans, and whether they qualify for tax credits or other financial help. In the old version, elements on the screen competed for attention, and the most valuable information sat low on the page or was hidden in an accordion. I reorganized the screen so the results come first, rewrote it in plain language, and ended it with one clear next step, so people know what they qualify for and what to do about it.
 
 *Images:* Results screen on phone and desktop · The next step after results (plan choice or confirmation)
 
@@ -114,7 +114,7 @@ WorkRadar needed to feel calm and trustworthy at a time of real public anxiety. 
 **Tagline:** One system for three state marketplace brands, built by directing an AI agent
 
 **Facts**
-- Years: (FILL IN: year started)–present
+- Years: 2026–present
 - Company: IdeaCrew
 - Role: Design Lead
 - Services: Product design, AI-assisted building, Accessibility
@@ -143,7 +143,7 @@ The agent was fast, but it filled gaps with assumptions instead of checking the 
 My judgment mattered most where a check can't decide. In dark mode, the agent's blue turned the buttons almost gray. Of the options, I chose #24487A because it held up in a group of buttons, even though another looked better on its own. I kept bright green for call-to-action buttons only, and rather than add a border to make it work, we found the closest green to the logo that passes contrast with white text: #00884D.
 
 **What's next**
-Vitae 27 is moving into IdeaCrew's own repository, where it will be the foundation for every Enroll market. (FILL IN: update once the move is done.)
+Vitae 27 now lives in IdeaCrew's own repository, where it will be the foundation for every Enroll market. The goal is to go live in 2027.
 
 ---
 
@@ -429,7 +429,7 @@ With the face where the eyes already are, the time reads at a glance with the ar
 
 **Facts**
 - Years: 2010
-- Context: Industrial design concept
+- Context: Industrial design, James Madison University
 - Role: Designer
 
 **Overview**
