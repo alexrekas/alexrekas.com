@@ -2,39 +2,46 @@
   "url": "/portfolio/enroll-app/",
   "template": "case",
   "title": "Enroll App",
-  "description": "Enroll App: Alex Rekas led the mobile-first, WCAG AA and Section 508 compliant redesign of the enrollment experience behind state health insurance marketplaces, now live in Maine's Individual Market.",
+  "description": "Enroll App: Alex Rekas led the mobile-first, WCAG 2.1 AA and Section 508 compliant redesign of the enrollment experience behind state health insurance marketplaces, now live in Maine's Individual Market.",
   "share": "assets/share/enroll-app.jpg",
-  "intro": "Enroll App runs the health insurance marketplaces for Washington DC, Maine and Massachusetts. I led the redesign of the enrollment experience: mobile-first, WCAG AA and Section 508 compliant, and built on a new Figma design system as the platform moved off Bootstrap 3. The redesign is live in Maine's Individual Market, with DC's migration planned for 2026–2027.",
+  "intro": "Enroll App runs the health insurance marketplaces for Washington, DC, Maine and Massachusetts. It's where people apply for coverage, find out what help they qualify for, and pick a plan, and where small businesses set up coverage for their employees. The app was built on Bootstrap 3 with no real mobile support, and an accessibility audit found problems serious enough to stop some people with disabilities from enrolling at all. I was design lead on a $1M+ modernization that moved the platform to Bootstrap 4 and 5, and I led the redesign of the enrollment experience on top of it: mobile-first, WCAG 2.1 AA and Section 508 compliant, and built on a new Figma design system. The redesign is live in Maine's Individual Market, and DC's migration is planned for 2026–2027.",
   "role": "Design Lead",
   "company": "IdeaCrew",
-  "team": "(FILL IN: names, with permission)",
   "services": ["Product design", "Accessibility", "Research", "Design system"],
-  "years": "(FILL IN: start year)–present",
+  "years": "2020–present",
   "hero": "enroll-newemployer-01-hero-dark.png",
   "hero_alt": "The redesigned Personal Information step of new employer enrollment in a desktop browser, with a three-step progress rail on the left.",
-  "next": {"title": "Vitae 27", "url": "/portfolio/vitae-27/"}
+  "next": {"title": "WorkRadar", "url": "/portfolio/workradar/"}
 }-->
 <section class="section" aria-labelledby="s-employer">
 <div class="section-text">
-<h2 id="s-employer">New employer enrollment</h2>
-<p>Small businesses signing up for coverage used to face one long form: personal details, employer details, office locations and notice preferences all on a single page, ending in a red Confirm button. I split it into three short steps (Personal Information, Business Information and Communication) with a progress rail that shows where you are and what's left. Each step asks about one thing, and Save &amp; Exit lets people stop to find a document and pick up where they left off next time they log in.</p>
+<h2 id="s-employer">New employer sign-up</h2>
+<p>Small businesses used to set up coverage on one long page: their own details, the company's details, office locations and notice preferences, all ending in a red Confirm button. I split it into three short steps, Personal Information, Business Information and Communication, with a progress rail that always shows where you are and what's left.</p>
+<p>Each step asks about one thing, and Continue only unlocks once the required fields are done, so nobody reaches the end and finds a list of errors. Owners often need to stop and find a document like their FEIN, so Save &amp; Exit lets them leave and pick up where they left off next time they log in. The last screen says plainly what happens next: a confirmation email once the account is approved.</p>
 </div>
 <div class="figs">
 <div class="pair">
-<figure><x-img src="enroll-newemployer-01b-personal-dark.png" alt="Step one, Personal Information: first and last name, date of birth, email and phone, with Cancel and Continue to Business Info buttons." sizes="(min-width: 1248px) 584px, (min-width: 1000px) calc(50vw - 40px), calc(100vw - 32px)"><figcaption>Step one asks only for the account holder's details. Continue unlocks once required fields are done.</figcaption></figure>
-<figure><x-img src="enroll-newemployer-02-business-dark.png" alt="Step two, Business Information: legal name, DBA, FEIN, entity kind and office location fields." sizes="(min-width: 1248px) 584px, (min-width: 1000px) calc(50vw - 40px), calc(100vw - 32px)"><figcaption>Legal name, FEIN, entity type and office locations get a step of their own.</figcaption></figure>
+<figure><x-img src="enroll-newemployer-01b-personal-dark.png" alt="Step one, Personal Information: first and last name, date of birth, email and phone, with Cancel and Continue to Business Info buttons." cols="2"><figcaption>Step one asks only for the account holder's details.</figcaption></figure>
+<figure><x-img src="enroll-newemployer-02-business-dark.png" alt="Step two, Business Information: legal name, DBA, FEIN, entity kind and office location fields." cols="2"><figcaption>Legal name, FEIN, entity type and office locations get a step of their own.</figcaption></figure>
 </div>
 <div class="pair">
-<figure><x-img src="enroll-newemployer-03-communication-dark.png" alt="Step three, Communication: radio buttons for electronic, paper, or both electronic and paper notices." sizes="(min-width: 1248px) 584px, (min-width: 1000px) calc(50vw - 40px), calc(100vw - 32px)"><figcaption>Employers choose electronic, paper or both for official notices.</figcaption></figure>
-<figure><x-img src="enroll-newemployer-04-complete-dark.png" alt="The Complete screen, telling the employer a confirmation email will follow once the account is approved." sizes="(min-width: 1248px) 584px, (min-width: 1000px) calc(50vw - 40px), calc(100vw - 32px)"><figcaption>A clear finish: a confirmation email follows once the account is approved.</figcaption></figure>
+<figure><x-img src="enroll-newemployer-03-communication-dark.png" alt="Step three, Communication: radio buttons for electronic, paper, or both electronic and paper notices." cols="2"><figcaption>Employers choose electronic, paper or both for official notices.</figcaption></figure>
+<figure><x-img src="enroll-newemployer-04-complete-dark.png" alt="The Complete screen, telling the employer a confirmation email will follow once the account is approved." cols="2"><figcaption>A clear finish: a confirmation email follows once the account is approved.</figcaption></figure>
 </div>
+<figure>
+<div class="pair before-after">
+<div><p class="kicker">Before</p><x-img src="Enroll-NewEmployer-old.png" alt="The old employer form: Personal Information, Employer Information, office location, phone and notice preferences on one long page, ending in a red Confirm button." cols="2"></div>
+<div><p class="kicker">After</p><x-img src="enroll-newemployer-desktop.png" alt="The redesigned first step on a laptop: Personal Information only, with a progress rail for the three steps." class="tile" cols="2"></div>
+</div>
+<figcaption>One long form became three focused steps.</figcaption>
+</figure>
 </div>
 </section>
 
 <section class="section" aria-labelledby="s-phone">
 <div class="section-text">
-<h2 id="s-phone">On a phone</h2>
-<p>A significant share of marketplace users only have a phone, but the old app had no mobile support. Every step of the new flow was designed at phone width first, then expanded for desktop. Fields stack in a single column, actions stay at the bottom of the step, and nothing requires horizontal scrolling.</p>
+<h2 id="s-phone">Phone first</h2>
+<p>A large share of marketplace users only have a phone, and the old app didn't work on one. Every step of the new flow was designed at phone width first, then expanded for desktop. Fields stack in a single column, the main action stays at the bottom of each step, and nothing needs horizontal scrolling.</p>
 </div>
 <div class="figs">
 <figure><x-img src="enroll-newemployer-05-phones-dark.png" alt="Three phones showing the Personal Information, Business Information and Communication steps in a single column."><figcaption>The same three steps, designed for phone first.</figcaption></figure>
@@ -42,37 +49,47 @@
 </div>
 </section>
 
+<section class="section" aria-labelledby="s-results">
+<div class="section-text">
+<h2 id="s-results">Eligibility results</h2>
+<p>(FILL IN: Two or three sentences: what someone sees when their results come back, what was confusing about the old version, and one decision you made. For example how you explained what they qualify for, or what to do next.)</p>
+</div>
+<div class="pair">
+<figure><x-todo>Eligibility results on a phone</x-todo></figure>
+<figure><x-todo>The next step after results: plan choice or confirmation</x-todo></figure>
+</div>
+</section>
+
+<section class="section" aria-labelledby="s-help">
+<div class="section-text">
+<h2 id="s-help">Help on every screen</h2>
+<p>People applying for coverage are often stressed, short on time, or reading in a second language. Every screen carries a language switch for English, Español and Amharic, and a help line with a TTY number, so help is never more than a glance away. An “I don't have a SSN” option keeps people without one from getting stuck at a required field, instead of abandoning the application.</p>
+</div>
+<div class="triple">
+<figure><x-todo>Language switch open</x-todo></figure>
+<figure><x-todo>Help line and TTY in the footer</x-todo></figure>
+<figure><x-todo>The “I don't have a SSN” option</x-todo></figure>
+</div>
+</section>
+
 <section class="section" aria-labelledby="s-access">
 <div class="section-text">
 <h2 id="s-access">Accessible by default</h2>
-<p>The audit found federal accessibility violations that made enrollment impossible for some people with disabilities. Rather than patch screens one at a time, I built WCAG AA and Section 508 requirements into the design system's foundations (color, type, components and interaction states), so every new feature inherits them. Every screen also carries a language switch (English, Español and Amharic) and a help line with TTY, and an “I don't have a SSN” option keeps people without one from getting stuck.</p>
+<p>The audit found federal accessibility violations, so patching screens one at a time wasn't going to work. I built WCAG 2.1 AA and Section 508 requirements into the design system's foundations: color, type, components and every interaction state. Focus, error and disabled states all meet contrast requirements, so any new screen built from the system starts out accessible instead of being fixed later. (FILL IN: confirm the contrast values, or a short line on how you checked them.)</p>
 </div>
 <div class="pair">
-<figure><x-todo>Close-ups of focus, error and disabled field states</x-todo><figcaption>Focus, error and disabled states meet WCAG AA contrast. (FILL IN: confirm contrast values)</figcaption></figure>
+<figure><x-todo>Close-ups of focus, error and disabled field states</x-todo><figcaption>Focus, error and disabled states meet WCAG AA contrast.</figcaption></figure>
 <figure><x-todo>Design system color and type tokens</x-todo><figcaption>Accessibility rules live in the system, so new screens inherit them.</figcaption></figure>
 </div>
 </section>
 
-<section class="section" aria-labelledby="s-before">
+<section class="section" aria-labelledby="s-rollout">
 <div class="section-text">
-<h2 id="s-before">Before and after</h2>
-</div>
-<figure>
-<div class="pair before-after">
-<div><p class="kicker">Before</p><x-img src="Enroll-NewEmployer-old.png" alt="The old employer form: Personal Information, Employer Information, office location, phone and notice preferences on one long page, ending in a red Confirm button." sizes="(min-width: 1248px) 584px, (min-width: 1000px) calc(50vw - 40px), calc(100vw - 32px)"></div>
-<div><p class="kicker">After</p><x-img src="enroll-newemployer-desktop.png" alt="The redesigned first step on a laptop: Personal Information only, with a progress rail for the three steps." class="tile" sizes="(min-width: 1248px) 584px, (min-width: 1000px) calc(50vw - 40px), calc(100vw - 32px)"></div>
-</div>
-<figcaption>One long form became three focused steps.</figcaption>
-</figure>
-<div class="figs after-pair">
-<x-video name="enroll-prototype" label="20–30 second looping screen recording of the prototype (MP4, muted, under 5 MB)." caption="The new employer flow, from the interactive prototype."></x-video>
-</div>
-</section>
-
-<section class="section closing">
-<div class="section-text">
-<p class="lede">The redesign is live in Maine's Individual Market, with an unbranded reference version ready for the other markets. DC's migration, the platform's largest deployment, is planned for 2026–2027.</p>
+<h2 id="s-rollout">Rolling it out</h2>
+<p>I present designs directly to the state marketplaces and turn their feedback and policy requirements into product decisions. Alongside Maine's version, there's an unbranded reference version the other states can adopt with their own branding. DC, the platform's largest deployment, is next, with its migration planned for 2026–2027.</p>
 <p><a href="https://www.figma.com/proto/Fq6XKsasazcH6utUxp9IEp/Enroll-Demo">Open the prototype in Figma <span aria-hidden="true">→</span></a></p>
-<blockquote class="quote">(FILL IN: quote from an IdeaCrew product owner or Maine marketplace contact)</blockquote>
+</div>
+<div class="figs">
+<x-video name="enroll-prototype" label="20–30 second looping screen recording of the prototype (MP4, muted, under 5 MB)." caption="The new employer flow, from the interactive prototype."></x-video>
 </div>
 </section>

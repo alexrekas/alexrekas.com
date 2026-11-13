@@ -2,23 +2,23 @@
   "url": "/portfolio/vitae-27/",
   "template": "case",
   "title": "Vitae 27",
-  "description": "Vitae 27: Alex Rekas built a multi-brand system for IdeaCrew's Enroll platform by directing an AI coding agent, making the design decisions and reviewing every result while the agent wrote the code.",
+  "description": "Vitae 27: how IdeaCrew's Enroll platform themes three state brands from one codebase. Alex Rekas built it by directing an AI coding agent, making the design decisions and reviewing every result.",
   "share": "assets/share/vitae-27.jpg",
-  "intro": "Vitae 27 is the design system behind IdeaCrew's Enroll platform, which runs health insurance marketplaces for Washington DC, Maine and Massachusetts. I built it by directing an AI coding agent: I made the design decisions and reviewed the output, and the agent wrote the code. One token set themes all three state brands in light and dark mode, and every change is checked for accessibility automatically.",
+  "intro": "Vitae 27 is how IdeaCrew's Enroll platform themes three state brands, DC, Maine and Massachusetts, from one codebase. I built it by directing an AI coding agent: I made the design decisions and reviewed every result, and the agent wrote the code. One token set switches between the three brands in light and dark mode, and every change is checked for accessibility automatically before it reaches a state's marketplace.",
   "role": "Design Lead",
   "company": "IdeaCrew",
-  "services": ["Product design", "AI-assisted building", "Accessibility", "Design system"],
+  "services": ["Product design", "AI-assisted building", "Accessibility"],
   "years": "(FILL IN: year started)–present",
-  "hero_todo": "Hero — the same Enroll screen in the DC, Maine and Massachusetts brands, side by side",
-  "next": {"title": "WorkRadar", "url": "/portfolio/workradar/"}
+  "hero_todo": "Hero: the same Enroll screen in the DC, Maine and Massachusetts brands, side by side",
+  "next": {"title": "RegSearch", "url": "/portfolio/regsearch/"}
 }-->
 <section class="section" aria-labelledby="s-brands">
 <div class="section-text">
 <h2 id="s-brands">One system, three brands</h2>
-<p>Each state marketplace has its own brand, but they all run on the same product. Instead of maintaining three sets of components, Vitae 27 uses one token set for color, type and spacing that switches between the DC, Maine and Massachusetts brands, each in light and dark mode. A fix made once shows up in every market.</p>
+<p>Each state has its own brand, but they all run the same product. Maintaining three sets of components would mean every fix happening three times, and the states slowly drifting apart. Instead, the brands differ only in their tokens for color, type and spacing. A fix made once shows up in every market, in light and dark mode.</p>
 </div>
 <div class="pair">
-<figure><x-todo>One component in light and dark mode for each brand (a 3×2 grid)</x-todo><figcaption>One token set, three brands, light and dark.</figcaption></figure>
+<figure><x-todo>One component in each brand, light and dark (a 3×2 grid)</x-todo><figcaption>One token set, three brands, light and dark.</figcaption></figure>
 <figure><x-todo>Token table: color, type and spacing values per brand</x-todo><figcaption>Brands differ only in their tokens.</figcaption></figure>
 </div>
 </section>
@@ -26,15 +26,15 @@
 <section class="section" aria-labelledby="s-pipeline">
 <div class="section-text">
 <h2 id="s-pipeline">From Figma to production</h2>
-<p>The system runs in one line from Figma to Storybook to the Rails components engineers ship. I directed an AI coding agent to build that pipeline and the components in it. My job was the part that needs a designer: deciding what each component should do, writing the rules, and reviewing every result against the Figma source before it shipped.</p>
+<p>The system runs in one line from Figma to Storybook to the Rails components engineers ship. I directed the agent to build that pipeline and the components in it. My job was the part that needs a designer: deciding what each component should do, writing the rules, and reviewing every result against the Figma source before it shipped.</p>
 </div>
-<figure><x-todo>Figma component beside its Storybook page</x-todo><figcaption>Figma is the source; Storybook shows what ships.</figcaption></figure>
+<figure><x-todo>A Figma component beside its Storybook page</x-todo><figcaption>Figma is the source; Storybook shows what ships.</figcaption></figure>
 </section>
 
 <section class="section" aria-labelledby="s-a11y">
 <div class="section-text">
 <h2 id="s-a11y">Accessibility on every change</h2>
-<p>WCAG 2.1 AA checks and visual-regression tests run automatically in CI. If a change breaks contrast, focus states or layout in any brand, it's caught before it reaches a state's marketplace.</p>
+<p>WCAG 2.1 AA checks and visual-regression tests run automatically in CI. If a change breaks contrast, focus states or layout in any brand, it's caught before it reaches a state. That turns accessibility from a review step into something the system enforces on its own.</p>
 </div>
 <div class="pair">
 <figure><x-todo>A CI run showing accessibility and visual-regression checks passing</x-todo><figcaption>Every change is checked before it ships.</figcaption></figure>
@@ -44,13 +44,14 @@
 
 <section class="section" aria-labelledby="s-agent">
 <div class="section-text">
-<h2 id="s-agent">What directing an agent taught me</h2>
-<p>(FILL IN: 2–3 sentences: what you had to specify carefully, where the agent needed correcting, and where your judgment mattered most. A concrete example works best.)</p>
+<h2 id="s-agent">Directing the agent</h2>
+<p>(FILL IN: 2–3 sentences in your own words. What you had to spell out carefully, where the agent got it wrong and how you caught it, and where your judgment mattered most. One concrete example is better than a general lesson.)</p>
 </div>
 </section>
 
-<section class="section closing">
+<section class="section" aria-labelledby="s-next">
 <div class="section-text">
-<p class="lede">Vitae 27 is moving into IdeaCrew's own repository, where it will be the foundation for every Enroll market. (FILL IN: update once the move is done)</p>
+<h2 id="s-next">What's next</h2>
+<p>Vitae 27 is moving into IdeaCrew's own repository, where it will be the foundation for every Enroll market. (FILL IN: update once the move is done.)</p>
 </div>
 </section>

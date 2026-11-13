@@ -103,11 +103,16 @@ def render_img(attrs):
     alt = attrs.get("alt")
     if alt is None:
         raise ValueError(f"missing alt on {name}")
-    sizes = attrs.get("sizes", "(min-width: 1248px) 1200px, calc(100vw - 32px)")
+    cols = {
+        "2": "(min-width: 1248px) 584px, (min-width: 1000px) calc(50vw - 40px), calc(100vw - 32px)",
+        "3": "(min-width: 1100px) 384px, (min-width: 700px) calc(33vw - 32px), calc(100vw - 32px)",
+        "4": "(min-width: 1100px) 282px, (min-width: 700px) calc(25vw - 30px), calc(50vw - 28px)",
+    }
+    sizes = attrs.get("sizes") or cols.get(attrs.get("cols", ""), "(min-width: 1248px) 1200px, calc(100vw - 32px)")
     eager = "eager" in attrs
     entries, fallback, w, h = make_variants(name)
     srcset = ", ".join(f"/{p} {tw}w" for p, tw in entries)
-    cls = f' class="{attrs["class"]}"' if "class" in attrs else ""
+    cls = f' class="{attrs["class"]}"' if attrs.get("class") else ""
     loading = 'fetchpriority="high"' if eager else 'loading="lazy"'
     return (
         f'<picture><source type="image/webp" srcset="{srcset}" sizes="{sizes}">'

@@ -4,46 +4,59 @@
   "title": "WorkRadar",
   "description": "WorkRadar: a daily health check-in and management dashboard for returning to the office during COVID-19, designed by Alex Rekas from concept through interactive prototype, including the brand.",
   "share": "assets/share/workradar.jpg",
-  "intro": "WorkRadar helped employers decide when it was safe to bring people back to the office during COVID-19. Employees and guests answered a short daily health check-in; managers saw local public-health data and team check-ins on one dashboard. I designed it from concept through interactive prototype, including the brand, in 2020–2021. It reached evaluation with a regional bank, then was shelved as restrictions eased.",
+  "intro": "WorkRadar helped employers decide when it was safe to bring people back to the office during COVID-19. Employees and guests answered a short daily health check-in, and managers saw local public-health data and their team's check-ins on one dashboard. I designed the employee app, the manager dashboard and the brand, from first concept through interactive prototype, in 2020–2021. It reached evaluation with a regional bank, then was shelved as restrictions eased.",
   "role": "Design Lead",
   "company": "IdeaCrew",
   "services": ["Product design", "Brand", "Mobile", "Dashboard"],
   "years": "2020–2021",
   "hero": "workradar-00-hero-v2.png",
   "hero_alt": "The WorkRadar management dashboard on a desktop screen, with the phone version of the overview beside it.",
-  "next": {"title": "RegSearch", "url": "/portfolio/regsearch/"}
+  "next": {"title": "Vitae 27", "url": "/portfolio/vitae-27/"}
 }-->
 <section class="section" aria-labelledby="s-checkin">
 <div class="section-text">
 <h2 id="s-checkin">Daily check-in</h2>
-<p>Every morning, employees answer two questions before coming in: have they been in close contact with someone with COVID-19 since their last screening, and do they have any of the listed symptoms. A summary lets them review and attest before submitting, and the result is unmistakable: OK to Enter, or Stop and stay home, with CDC resources and a self-isolation date worked out for them. Guests can screen without an account, and anyone not working that day can say so and pick a reason.</p>
+<p>Every morning, employees answer two questions before coming in: have they been in close contact with someone with COVID-19 since their last screening, and do they have any of the listed symptoms. The questions are plain yes-or-no, based on CDC attestation guidance, and a summary lets people review and attest before they submit.</p>
+<p>Not everyone fits the main path. Guests can screen without an account, and anyone not working that day can say so and pick a reason, so managers aren't left guessing about missing check-ins.</p>
 </div>
-<div class="figs">
 <div class="pair">
-<figure><x-img src="workradar-01-home.png" alt="WorkRadar home screen on a phone, greeting the employee by name, showing their last screening time and buttons to begin a screening or skip it for the day." sizes="(min-width: 1248px) 584px, (min-width: 1000px) calc(50vw - 40px), calc(100vw - 32px)"><figcaption>Home shows when you last screened and starts the next screening.</figcaption></figure>
-<figure><x-img src="workradar-02-question.png" alt="Question 2 of the check-in on a phone: are you experiencing any of seven listed symptoms, each with Yes and No buttons." sizes="(min-width: 1248px) 584px, (min-width: 1000px) calc(50vw - 40px), calc(100vw - 32px)"><figcaption>Employees answer plain yes-or-no questions, based on CDC attestation guidance.</figcaption></figure>
+<figure><x-img src="workradar-01-home.png" alt="WorkRadar home screen on a phone, greeting the employee by name, showing their last screening time and buttons to begin a screening or skip it for the day." cols="2"><figcaption>Home shows when you last screened and starts the next screening.</figcaption></figure>
+<figure><x-img src="workradar-02-question.png" alt="Question 2 of the check-in on a phone: are you experiencing any of seven listed symptoms, each with Yes and No buttons." cols="2"><figcaption>Plain yes-or-no questions, based on CDC attestation guidance.</figcaption></figure>
 </div>
-<figure><x-img src="workradar-03-results-v2.png" alt="Two result screens on phones: an all-green OK To Enter screen with a checkmark and a QR code, and an all-red STOP screen with an X, emergency guidance and a link to COVID-19 resources."><figcaption>Each check-in ends with a clear answer: come in, or stay home.</figcaption></figure>
+</section>
+
+<section class="section" aria-labelledby="s-result">
+<div class="section-text">
+<h2 id="s-result">A result you can't misread</h2>
+<p>A check-in is only useful if the answer is obvious from across a lobby. OK to Enter fills the screen in green with a checkmark and a QR code to show at the door. Stop fills it in red with an X, then turns to what to do next: CDC resources and a self-isolation date worked out for them.</p>
 </div>
+<figure><x-img src="workradar-03-results-v2.png" alt="Two result screens on phones: an all-green OK To Enter screen with a checkmark and a QR code, and an all-red STOP screen with an X, emergency guidance and a link to COVID-19 resources."><figcaption>Come in, or stay home. Nothing in between.</figcaption></figure>
 </section>
 
 <section class="section" aria-labelledby="s-dashboard">
 <div class="section-text">
 <h2 id="s-dashboard">Management dashboard</h2>
-<p>Managers needed two pictures at once: what was happening in the community and what was happening on their own team. The dashboard pairs public-health trends with the organization's screening results, and lists every employee's latest status with filters by location.</p>
-<p>Early on, the CEO wanted the employee list as cards. I pushed for a table instead, because managers needed to compare a large set of employees quickly, and a table makes that easy. Cards might have looked nicer, but this was a call to put UX above UI, and the table shipped in the final design.</p>
+<p>Managers needed two pictures at once: what was happening in their community and what was happening on their own team. The dashboard pairs public-health trends for DC, Virginia and Maryland with the organization's screening results, and lists every employee's latest status with filters by facility, status and division.</p>
+<p>Early on, the CEO wanted the employee list as cards. I pushed for a table instead, because managers needed to compare a lot of employees quickly, and a table makes that easy. Cards might have looked nicer, but this was a call to put UX above UI, and the table made it into the final design.</p>
 </div>
 <div class="figs">
-<figure><x-img src="workradar-04-cards-v2.png" alt="Two dashboard panels side by side: Attestation, charting the team's no-response and symptomatic rates over 28 days, and Public Health, charting case trends for DC, Virginia and Maryland."><figcaption>Team screening results sit beside local public-health trends.</figcaption></figure>
+<figure><x-img src="workradar-04-cards-v2.png" alt="Two dashboard panels side by side: Attestation, charting the team's no-response and symptomatic rates over 28 days, and Public Health, charting case trends for DC, Virginia and Maryland."><figcaption>Team screening results beside local public-health trends.</figcaption></figure>
 <figure><x-img src="workradar-05-employees-v2.png" alt="The Employees table listing name, last attestation, facility, status and division, with a filter panel for date range, facility, status and division."><figcaption>Every employee's latest status in one sortable, filterable table.</figcaption></figure>
-<figure><x-img src="workradar-06-overview.png" alt="The manager overview on a phone: a response timeline chart and a table of employee screening totals."><figcaption>Managers get the same overview on their phone.</figcaption></figure>
 </div>
+</section>
+
+<section class="section" aria-labelledby="s-go">
+<div class="section-text">
+<h2 id="s-go">On the go</h2>
+<p>Managers aren't always at a desk, so the same overview works on a phone: a response timeline and the day's totals for screenings, symptoms, exposures and no-responses, with the full employee list a tap away.</p>
+</div>
+<figure><x-img src="workradar-06-overview.png" alt="The manager overview on a phone: a response timeline chart and a table of employee screening totals."><figcaption>The manager overview on a phone.</figcaption></figure>
 </section>
 
 <section class="section" aria-labelledby="s-brand">
 <div class="section-text">
 <h2 id="s-brand">A brand for an anxious moment</h2>
-<p>WorkRadar needed to feel calm and trustworthy at a time of real public anxiety. I created the name, logo, color palette and visual language from scratch, outside IdeaCrew's existing design system. The chevron in the wordmark points inward: a return to the workplace, to normalcy, to each other.</p>
+<p>WorkRadar needed to feel calm and trustworthy at a time of real public anxiety. I created the name, logo, color palette and visual language from scratch, outside IdeaCrew's existing design system. The chevron in the wordmark points inward: a return to the workplace, to normalcy, to each other. OK Green and Stop Red carry the two results, so the brand and the product speak the same language.</p>
 </div>
 <div class="figs">
 <figure><x-img src="workradar-07-brand-board.png" alt="The WorkRadar brand board: the wordmark with its inward-pointing chevron on dark and white backgrounds, an eight-color palette including OK Green and Stop Red, and the Roboto type scale."><figcaption>A calm, trustworthy identity built from scratch.</figcaption></figure>
