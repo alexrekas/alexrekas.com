@@ -81,7 +81,7 @@ function allPages() {
       const issues = [];
       const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
       // stray closing tags push content out of the centered wrapper
-      const strays = await page.evaluate(() => [...document.querySelectorAll("main > :not(.wrap), body > :not(.skip-link):not(.site-header):not(main):not(.site-footer):not(script)")].map((e) => e.tagName + (e.className ? "." + e.className : "")));
+      const strays = await page.evaluate(() => [...document.querySelectorAll("main > :not(.wrap), body > :not(.skip-link):not(.site-header):not(main):not(.site-footer):not(script):not(.lens):not(.lens-defs)")].map((e) => e.tagName + (e.className ? "." + e.className : "")));
       strays.forEach((s) => issues.push(`element outside the page wrapper: ${s}`));
       if (overflow > 0) issues.push(`horizontal overflow ${overflow}px`);
       const broken = await page.evaluate(() => [...document.images].filter((i) => !i.complete || i.naturalWidth === 0).map((i) => i.currentSrc || i.src));

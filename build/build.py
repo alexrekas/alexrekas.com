@@ -259,6 +259,9 @@ def head(meta):
     e = lambda s: html.escape(s, quote=True)
     robots = '<meta name="robots" content="noindex">\n' if PREVIEW or meta.get("noindex") else ""
     canonical = f"{SITE_URL}{url}"
+    # page-specific scripts: the accessibility lens on case studies, plus any listed in metadata
+    extra = (["lens.js"] if meta.get("template") == "case" else []) + meta.get("scripts", [])
+    extra_tags = "".join(f'\n<script src="/assets/js/{n}" defer></script>' for n in extra)
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -286,7 +289,7 @@ def head(meta):
 <link rel="preload" href="/assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/ibm-plex-sans-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css">
-<script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/site.js" defer></script>{extra_tags}
 </head>
 """
 
