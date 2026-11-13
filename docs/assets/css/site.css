@@ -336,3 +336,50 @@ mark.review { display: inline-block; margin-top: 6px; font-size: 12px; line-heig
 @media (max-width: 760px) { .about-list { grid-template-columns: minmax(0, 1fr); row-gap: 8px; padding-top: 48px; } }
 .about-list .detail a { color: var(--muted); }
 .about-list .detail a:hover { color: var(--text); }
+
+/* ---------- phone menu: frosted glass panel (needs JavaScript; links stay inline without it) ---------- */
+.site-header .wrap { position: relative; }
+.menu-button { display: none; }
+@media (max-width: 640px) {
+  .js .menu-button {
+    position: relative; z-index: 3; display: inline-flex; align-items: center; justify-content: center;
+    width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; cursor: pointer; color: var(--text);
+    background: rgba(255,255,255,.08); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  }
+  .js .menu-button:hover { background: rgba(255,255,255,.14); }
+  .menu-icon { position: relative; width: 16px; height: 10px; }
+  .menu-icon i { position: absolute; left: 0; width: 16px; height: 1.5px; border-radius: 1px; background: currentColor; transition: transform .25s ease, top .25s ease; }
+  .menu-icon i:first-child { top: 1px; }
+  .menu-icon i:last-child { top: 7.5px; }
+  .menu-open .menu-icon i:first-child { top: 4.25px; transform: rotate(45deg); }
+  .menu-open .menu-icon i:last-child { top: 4.25px; transform: rotate(-45deg); }
+
+  .js .site-header nav {
+    position: absolute; z-index: 2; top: 14px; right: calc(var(--gutter) - 6px); min-width: 220px;
+    padding: 60px 8px 10px; border-radius: 22px; border: 1px solid rgba(255,255,255,.09);
+    background: rgba(30,32,36,.62); -webkit-backdrop-filter: blur(40px) saturate(160%); backdrop-filter: blur(40px) saturate(160%);
+    box-shadow: 0 24px 60px rgba(0,0,0,.5);
+    opacity: 0; visibility: hidden; transform: scale(.94); transform-origin: top right;
+    transition: opacity .2s ease, transform .25s ease, visibility 0s linear .25s;
+  }
+  .js .menu-open nav { opacity: 1; visibility: visible; transform: none; transition: opacity .2s ease, transform .25s ease; }
+  .js .site-header nav ul { flex-direction: column; gap: 0; font-size: 20px; }
+  .js .site-header nav a { position: relative; display: block; padding: 10px 16px 10px 32px; border-radius: 12px; color: var(--text-2); text-decoration: none; }
+  .js .site-header nav a:hover { background: rgba(255,255,255,.06); color: var(--text); }
+  .js .site-header nav a[aria-current] { color: var(--text); text-decoration: none; }
+  .js .site-header nav a[aria-current]::before { content: ""; position: absolute; left: 16px; top: 50%; width: 6px; height: 6px; margin-top: -3px; border-radius: 50%; background: var(--accent); }
+}
+@media (max-width: 640px) and (prefers-reduced-motion: reduce) {
+  .js .site-header nav, .js .menu-open nav, .menu-icon i { transition: none; }
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .js .site-header nav { background: rgba(30,32,36,.97); }
+}
+
+/* ---------- 404 ---------- */
+.not-found { padding: 96px 0 24px; max-width: 760px; }
+.not-found .kicker { margin-bottom: 16px; }
+.not-found h1 { font-size: clamp(44px, 7.4vw, 100px); font-weight: 400; line-height: 1.04; letter-spacing: -.035em; margin-bottom: 24px; }
+.not-found .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.button.secondary { border-color: var(--pill); color: var(--text); }
+.button.secondary:hover { background: var(--text); border-color: var(--text); color: var(--bg); }

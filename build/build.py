@@ -227,7 +227,9 @@ def header(url):
     return (
         '<header class="site-header"><div class="wrap">'
         '<a class="brand" href="/"><svg class="brand-mark" viewBox="0 0 165.37 144" aria-hidden="true" focusable="false"><path fill="currentColor" d="M165.37,46.66A46.64,46.64,0,0,0,118.66,0H64L0,144H165.37L140.44,87.93A46.58,46.58,0,0,0,165.37,46.66ZM140.71,128H95.53L82.66,99.05,69.79,128H24.66L74.43,16h44.23A30.65,30.65,0,0,1,133,73.8l-13.23,7,6.08,13.67Z"/></svg><span class="visually-hidden">Alex Rekas, home</span></a>'
-        f'<nav aria-label="Main"><ul>{"".join(items)}</ul></nav>'
+        '<button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" hidden>'
+        '<span class="visually-hidden">Menu</span><span class="menu-icon" aria-hidden="true"><i></i><i></i></span></button>'
+        f'<nav id="site-nav" aria-label="Main"><ul>{"".join(items)}</ul></nav>'
         "</div></header>"
     )
 
@@ -279,6 +281,8 @@ def head(meta):
 <meta name="twitter:image" content="{SITE_URL}/{share}">
 <meta name="theme-color" content="#0F1012">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script>document.documentElement.classList.add("js")</script>
 <link rel="preload" href="/assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/ibm-plex-sans-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css">
@@ -376,6 +380,7 @@ def main():
     pages = sorted((BUILD / "pages").rglob("*.html"))
     only = set(sys.argv[1:])
     built = []
+    indexable = []
     for p in pages:
         text = p.read_text()
         m = re.match(r"\s*<!--(.*?)-->", text, re.S)
@@ -389,9 +394,17 @@ def main():
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(render(meta, body))
         built.append(meta["url"])
+        if not (meta.get("noindex") or meta.get("redirect")):
+            indexable.append(meta["url"])
     robots = DOCS / "robots.txt"
+    sitemap = DOCS / "sitemap.xml"
     if PREVIEW:
         robots.write_text("User-agent: *\nDisallow: /\n")
+        sitemap.unlink(missing_ok=True)
+    else:
+        robots.write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n")
+        urls = "".join(f"<url><loc>{SITE_URL}{u}</loc></url>" for u in sorted(indexable))
+        sitemap.write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
     (DOCS / ".nojekyll").touch()
     print(f"built {len(built)} pages")
 
