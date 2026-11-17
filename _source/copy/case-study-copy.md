@@ -49,9 +49,9 @@ When an application is finished, the results screen tells people what they quali
 *Images:* Results screen on phone and desktop · The next step after results (plan choice or confirmation)
 
 **Help on every screen**
-People applying for coverage are often stressed, short on time or reading in a second language. Every screen carries a language switch for English, Español and Amharic, and a help line with a TTY number, so help is never more than a glance away. An "I don't have a SSN" option keeps people without one from getting stuck at a required field, instead of abandoning the application.
+People applying for coverage are often stressed, short on time or reading in a second language. Every screen carries a language switch for English, Español and Amharic, and a help line with a TTY number, so help is never more than a glance away. An "I don't have an SSN" option keeps people without one from getting stuck at a required field, instead of abandoning the application.
 
-*Images:* Language switch open · Help line and TTY in the footer · The "I don't have a SSN" option
+*Images:* Language switch open · Help line and TTY in the footer · The "I don't have an SSN" option
 
 **Accessible by default**
 The audit found federal accessibility violations, so patching screens one at a time wasn't going to work. I built WCAG 2.1 AA and Section 508 requirements into the design system's foundations: color, type, components and every interaction state. Focus, error and disabled states all meet contrast requirements, so any new screen built from the system starts out accessible instead of being fixed later.
@@ -181,7 +181,7 @@ The old sign-in page was a small form surrounded by blocks of text on a yellow b
 *Images:* Before and after: sign-in
 
 **Brand**
-I also designed a new RegSearch logo, repositioning it as a modern research tool rather than a legacy government utility. The mark set the color palette and icon language for the interface.
+I also designed a new RegSearch logo, repositioning the product as a modern research tool rather than a legacy government utility. The mark set the color palette and icon language for the interface.
 
 *Images:* The RegSearch wordmark
 
@@ -202,7 +202,7 @@ I also designed a new RegSearch logo, repositioning it as a modern research tool
 In May 2020 I ran a two-week heuristic evaluation of the Public Health Law section of cdc.gov, working with the agency Viscid. The section runs on CDC's sitewide content management design system, so problems found here were likely repeated across the site. I rated every issue by severity, so CDC's team could fix the worst first.
 
 **How I evaluated**
-I reviewed each page against eight heuristics: consistency, standardization, cognitive load, navigational effort, aesthetic integrity, information architecture, recognition and linguistic clarity. Each finding got a low, moderate or high priority based on how much it got in the way of someone looking for public health law resources, not how hard it would be to fix.
+I reviewed each page against eight heuristics: consistency, standardization, cognitive load, navigational effort, aesthetic integrity, information architecture, recognition and linguistic clarity. Each finding was rated low, moderate or high priority by how much it got in the way of someone looking for public health law resources, not how hard it would be to fix.
 
 **High priority: pages too dense to scan**
 Long pages packed sections tightly together, with little space between a heading and the content around it, so it was hard to tell where one topic ended and the next began. Splitting long pages and adding space between headings and content would let people find what they came for faster.
@@ -220,7 +220,7 @@ A CSS error left gaps in rounded card corners: a one-line fix with an outsized e
 *Images:* Close-ups of the card corners
 
 **Outcome**
-I wasn't involved in implementation, so I can't confirm which recommendations were adopted. Revisiting cdc.gov later, many of the patterns I flagged, especially content density and visual hierarchy, appear to have been addressed. The full evaluation is available on request.
+I wasn't involved in implementation, so I can't confirm which recommendations were adopted. On cdc.gov today, many of the patterns I flagged, especially content density and visual hierarchy, appear to have been addressed. The full evaluation is available on request.
 
 (FILL IN: Your resume also lists cdc.gov wireframes aligned with new federal design guidelines, and storyboards for digital content. Were those part of this engagement? If so, they could be a section here.)
 
@@ -455,6 +455,6 @@ Most drinking fountains I saw in parks had no real way to refill a bottle. Parks
 BEN is a bench I designed and built in a week at the end of college, after years of thinking about it. It borrows the relaxed angles of an Adirondack chair and the reduced, floating forms of the Dutch De Stijl movement, sized for my 6'2" frame.
 
 **Adirondack comfort, De Stijl form**
-A beach-vacation Adirondack chair started the idea; a college studio on the Netherlands gave it a style. De Stijl stripped form down to essentials and let parts appear to float. An outer frame steadies the bench, physically and visually, while the seat floats inside it. A later version drops the frame so it sits lower and steadier.
+A beach-vacation Adirondack chair started the idea; a college studio on the Netherlands gave it a style. De Stijl stripped form down to essentials and let parts appear to float. An outer frame steadies the bench, physically and visually, while the seat floats inside it.
 
 *Images:* The bench in use · De Stijl inspiration · Sketches and studies · The outline turned into a logo
