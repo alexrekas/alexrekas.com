@@ -44,12 +44,12 @@ A large share of marketplace users only have a phone, and the old app didn't wor
 *Images:* Three phones: Personal Information, Business Information, Communication · The full seven-screen mobile flow
 
 **Eligibility results**
-When an application is finished, the results screen tells people what they qualify for: whether they can shop for plans, and whether they qualify for tax credits or other financial help. In the old version, elements on the screen competed for attention, and the most valuable information sat low on the page or was hidden in an accordion. I reorganized the screen so the results come first, rewrote it in plain language, and ended it with one clear next step, so people know what they qualify for and what to do about it.
+When an application is finished, the results screen tells people what they qualify for: whether they can shop for plans, and whether they qualify for tax credits or other financial help. In the old version, elements on the screen competed for attention, and the most valuable information sat low on the page or was hidden in an accordion. I reorganized the screen so the results come first, rewrote it in plain language and ended it with one clear next step, so people know what they qualify for and what to do about it.
 
 *Images:* Results screen on phone and desktop · The next step after results (plan choice or confirmation)
 
 **Help on every screen**
-People applying for coverage are often stressed, short on time, or reading in a second language. Every screen carries a language switch for English, Español and Amharic, and a help line with a TTY number, so help is never more than a glance away. An "I don't have a SSN" option keeps people without one from getting stuck at a required field, instead of abandoning the application.
+People applying for coverage are often stressed, short on time or reading in a second language. Every screen carries a language switch for English, Español and Amharic, and a help line with a TTY number, so help is never more than a glance away. An "I don't have a SSN" option keeps people without one from getting stuck at a required field, instead of abandoning the application.
 
 *Images:* Language switch open · Help line and TTY in the footer · The "I don't have a SSN" option
 
@@ -128,7 +128,7 @@ Each state has its own brand, but they all run the same product. Maintaining thr
 *Images:* One component in each brand, light and dark (a 3×2 grid) · Token table per brand
 
 **From Figma to production**
-The system runs in one line from Figma to Storybook to the Rails components engineers ship. I directed the agent to build that pipeline and the components in it. My job was the part that needs a designer: deciding what each component should do, writing the rules, and reviewing every result against the Figma source before it shipped.
+The system runs in one line from Figma to Storybook to the Rails components engineers ship. I directed the agent to build that pipeline and the components in it. My job was the part that needs a designer: deciding what each component should do, writing the rules and reviewing every result against the Figma source before it shipped.
 
 *Images:* A Figma component beside its Storybook page
 
@@ -166,7 +166,7 @@ The old screen gave the document only a quarter of the space, squeezed under a c
 *Images:* Before and after: the search results screen
 
 **Finding the right document**
-Picking which documents to search used to mean working through a dense table of checkboxes. The new document browser is a clean list with currency and dates, a search field, and favorites, so people can get back to the regulations they use most without hunting for them.
+Picking which documents to search used to mean working through a dense table of checkboxes. The new document browser is a clean list with currency and dates, a search field and favorites, so people can get back to the regulations they use most without hunting for them.
 
 *Images:* Before and after: document selection
 
@@ -205,7 +205,7 @@ In May 2020 I ran a two-week heuristic evaluation of the Public Health Law secti
 I reviewed each page against eight heuristics: consistency, standardization, cognitive load, navigational effort, aesthetic integrity, information architecture, recognition and linguistic clarity. Each finding got a low, moderate or high priority based on how much it got in the way of someone looking for public health law resources, not how hard it would be to fix.
 
 **High priority: pages too dense to scan**
-Long pages packed sections tightly together, with little space between a heading and the content around it, so it was hard to tell where one topic ended and the next began. Splitting long pages and adding space between headers and content would let people find what they came for faster.
+Long pages packed sections tightly together, with little space between a heading and the content around it, so it was hard to tell where one topic ended and the next began. Splitting long pages and adding space between headings and content would let people find what they came for faster.
 
 *Images:* Annotated long pages
 
@@ -323,7 +323,7 @@ Shape and font pairing ran through lightning bolts, brackets, interlocking lette
 *Images:* Interlocking I and C marks · Bolts and brackets · Modern bulbs · Color lockups · Four finalist directions
 
 **The decision**
-Leadership's feedback was clear: keep the lightbulb. So the new mark is an evolution, not a revolution. The incandescent bulb, old technology, became a simpler modern outline, and the ampersand inside it became a plus that reads as both "and" and health care. Colors were darkened for higher contrast.
+Leadership's feedback was clear: keep the lightbulb. So the new mark is an evolution, not a revolution. The incandescent bulb, old technology, became a simpler modern outline, and the ampersand inside it became a plus that reads as both “and” and health care. Colors were darkened for higher contrast.
 
 *Images:* Before and after · The mark on light and dark backgrounds
 
@@ -354,7 +354,7 @@ The brand launched across marketing documents, document and slide templates, and
 In 2015 I redesigned the website for CrossFit Metropolis, a gym in New York City, working directly with its owners. The old site buried what people came for under a long, text-heavy homepage. I cut it down to the workout of the day, a short answer to "what is CrossFit?" and a simpler path to sign up, and built the look around professional photography.
 
 **One homepage for two audiences**
-Members check the site every day for the workout of the day; newcomers want to know what CrossFit is and how to start. I talked with the owners, took a class myself, and moved the most-used content into the hero and just below the fold. Old workouts went to an archive and low-traffic links moved to the footer.
+Members check the site every day for the workout of the day; newcomers want to know what CrossFit is and how to start. I talked with the owners, took a class myself and moved the most-used content into the hero and just below the fold. Old workouts went to an archive and low-traffic links moved to the footer.
 
 *Images:* Before and after homepage · Desktop and phone
 
@@ -433,7 +433,7 @@ With the face where the eyes already are, the time reads at a glance with the ar
 - Role: Designer
 
 **Overview**
-Most drinking fountains make refilling a reusable bottle slow and awkward: you tilt the bottle, it never fills, and the stream is weak. LONDON is a concept fountain designed for refilling a bottle as well as taking a drink.
+Most drinking fountains make refilling a reusable bottle slow and awkward: you tilt the bottle, it never fills and the stream is weak. LONDON is a concept fountain designed for refilling a bottle as well as taking a drink.
 
 **From observation to form**
 Most drinking fountains I saw in parks had no real way to refill a bottle. Parks would be a better experience if more fountains let people refill a reusable bottle as easily as they take a drink. The sketches worked toward a single fountain that does both, with a curved hood and room underneath for a bottle.
