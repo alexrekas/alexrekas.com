@@ -20,6 +20,7 @@ Custom tags expanded by the builder:
 Any "(FILL IN: ...)" text becomes a visible placeholder.
 Absolute site paths in href/src ("/portfolio/") are rewritten to relative paths.
 """
+import hashlib
 import html
 import json
 import os
@@ -254,6 +255,12 @@ def footer():
     )
 
 
+
+def asset_v(rel):
+    """Short content hash for an asset in build/static, so browsers fetch a new copy whenever it changes."""
+    p = BUILD / "static" / rel.lstrip("/")
+    return hashlib.sha1(p.read_bytes()).hexdigest()[:8] if p.exists() else "0"
+
 def head(meta):
     url = meta["url"]
     title = meta["title"]
@@ -265,7 +272,7 @@ def head(meta):
     canonical = f"{SITE_URL}{url}"
     # page-specific scripts: the accessibility lens on case studies, plus any listed in metadata
     extra = (["lens.js"] if meta.get("template") == "case" else []) + meta.get("scripts", [])
-    extra_tags = "".join(f'\n<script src="/assets/js/{n}" defer></script>' for n in extra)
+    extra_tags = "".join(f'\n<script src="/assets/js/{n}?v={asset_v("assets/js/" + n)}" defer></script>' for n in extra)
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -292,8 +299,8 @@ def head(meta):
 <script>document.documentElement.classList.add("js")</script>
 <link rel="preload" href="/assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/ibm-plex-sans-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/site.css">
-<script src="/assets/js/site.js" defer></script>{extra_tags}
+<link rel="stylesheet" href="/assets/css/site.css?v={asset_v('assets/css/site.css')}">
+<script src="/assets/js/site.js?v={asset_v('assets/js/site.js')}" defer></script>{extra_tags}
 </head>
 """
 
