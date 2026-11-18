@@ -406,59 +406,41 @@ html[data-lens="achroma"] .case picture img, html[data-lens="achroma"] .case vid
 }
 @media print { .lens { display: none; } }
 
-/* ---------- homepage carousel: cards measured from the reference site (3:2, 16px radius,
-   40px gap, text 32px in from the bottom-left corner) ---------- */
-.featured { --pad: max(var(--gutter), calc(50vw - 600px)); }
-.featured-head { display: flex; justify-content: flex-end; margin-bottom: 16px; }
-.carousel-controls { display: flex; gap: 8px; }
-.carousel-controls[hidden] { display: none; }
-.carousel-controls button {
-  display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border-radius: 50%;
-  border: 1px solid var(--pill); background: transparent; color: var(--text); cursor: pointer;
-}
-.carousel-controls button:hover:not([aria-disabled="true"]) { background: rgba(255,255,255,.08); border-color: var(--muted); }
-.carousel-controls button[aria-disabled="true"] { opacity: .35; cursor: default; }
-.carousel-controls svg { width: 20px; height: 20px; }
-.carousel { margin-inline: calc(50% - 50vw); }
-.carousel-track {
-  display: flex; gap: 40px; margin: 0; padding: 0 var(--pad); list-style: none;
-  overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-padding-inline: var(--pad);
-  scrollbar-width: none;
-}
-.carousel-track::-webkit-scrollbar { display: none; }
-.feature {
-  position: relative; flex: 0 0 min(1215px, calc(100vw - var(--pad) - 72px)); aspect-ratio: 3 / 2;
-  border-radius: 16px; overflow: hidden; background: var(--tile); scroll-snap-align: start;
-}
+/* ---------- homepage featured work: all four projects visible at once, a 2 x 2 grid of 3:2 cards
+   (one column under 900px, 4:5 cards on phones) ---------- */
+.feature-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 0; padding: 0; list-style: none; }
+.feature { position: relative; aspect-ratio: 3 / 2; border-radius: 16px; overflow: hidden; background: var(--tile); }
 .feature picture, .feature-img { position: absolute; inset: 0; width: 100%; height: 100%; }
 .feature-img { object-fit: cover; object-position: center; transition: transform .5s ease; }
 .feature-img.fit-contain { object-fit: contain; }
 .feature:hover .feature-img { transform: scale(1.02); }
 /* the shade sits behind the text and is at least 62% black wherever text can be, so white text clears 4.5:1 on any image */
 .feature-text {
-  position: absolute; left: 0; right: 0; bottom: 0; padding: 120px 32px 32px;
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,.62) 112px, rgba(0,0,0,.82) 100%);
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 80px 24px 24px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,.62) 72px, rgba(0,0,0,.82) 100%);
 }
-.feature-name { font-size: 32px; font-weight: 400; line-height: 1.3; letter-spacing: -.02em; }
+.feature-name { font-size: 24px; font-weight: 400; line-height: 1.3; letter-spacing: -.015em; }
 .feature-name a { color: #FFFFFF; text-decoration: none; }
 .feature-name a::after { content: ""; position: absolute; inset: 0; border-radius: 16px; z-index: 1; }
 .feature-name a:focus-visible { outline: none; }
 .feature:focus-within { outline: 2px solid var(--accent); outline-offset: -2px; }
 .feature:focus-within .feature-name a::after { box-shadow: inset 0 0 0 4px var(--accent); }
-.feature-tagline { margin: 0; font-size: 20px; line-height: 1.4; color: rgba(255,255,255,.9); }
-.feature .tags { margin-top: 20px; gap: 10px; font-size: 13px; color: #FFFFFF; }
-.feature .tags li { padding: 8px 16px; border-color: rgba(255,255,255,.55); line-height: 1.2; }
+.feature-tagline { margin: 0; font-size: 16px; line-height: 1.4; color: rgba(255,255,255,.9); }
+.feature .tags { margin-top: 14px; gap: 8px; font-size: 11px; color: #FFFFFF; }
+.feature .tags li { padding: 6px 12px; border-color: rgba(255,255,255,.55); line-height: 1.2; }
 .featured .see-all { padding-top: 24px; }
+@media (max-width: 899px) {
+  .feature-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .feature-name { font-size: 28px; }
+  .feature-tagline { font-size: 18px; }
+}
 @media (max-width: 640px) {
-  .carousel-track { gap: 16px; }
-  .feature { flex-basis: calc(100vw - 2 * var(--gutter) - 24px); aspect-ratio: 4 / 5; }
-  .feature-text { padding: 96px 20px 20px; background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,.62) 88px, rgba(0,0,0,.82) 100%); }
+  .feature-grid { gap: 16px; }
+  .feature { aspect-ratio: 4 / 5; }
+  .feature-text { padding: 88px 20px 20px; background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,.62) 80px, rgba(0,0,0,.82) 100%); }
   .feature-name { font-size: 24px; }
   .feature-tagline { font-size: 17px; }
-  .feature .tags { margin-top: 14px; gap: 8px; font-size: 11px; }
-  .feature .tags li { padding: 6px 12px; }
 }
-@media (prefers-reduced-motion: reduce) { .carousel-track { scroll-behavior: auto; } }
 
 /* ---------- images shown whole on the tile color ---------- */
 .fit-tile picture { display: flex; justify-content: center; align-items: center; padding: clamp(16px, 3vw, 32px); border-radius: 16px; background: var(--tile); }
