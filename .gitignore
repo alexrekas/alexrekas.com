@@ -1,2 +1,5 @@
 node_modules/
 .DS_Store
+
+# throwaway review screenshots
+_source/preview/
