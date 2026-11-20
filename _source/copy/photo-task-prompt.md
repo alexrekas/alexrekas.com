@@ -14,8 +14,8 @@ I'm Alex Rekas, a product designer rebuilding my portfolio site, alexrekas.com. 
    - **AI context photos plus compositing:** generate a scene with a blank screen, then place my real screenshot onto the screen in Photoshop or Figma.
    - **Upscaling and re-exports:** older images that are the right content but too small.
    - **Digging through archives:** things I may or may not still have.
-2. **Order by dependency.** For example, the Enroll eligibility results screen is used on a case study page, the Work tile and the homepage photo, so it has to be exported first. The same goes for the WorkRadar OK to Enter and STOP screens, and the upscaled RegSearch screen.
-3. **Within that, order by priority:** Priority 1 is the four featured projects (Enroll App, WorkRadar, RegSearch and CDC), the homepage carousel and the Work page tiles. Priority 2 is Vitae 27, TakeCare, the CRE project, IdeaCrew Rebrand and CrossFit. Priority 3 is older work.
+2. **Order by dependency.** For example, the WorkRadar OK to Enter and STOP screens are used on the case study page, the Work tile and the homepage photo, so export them first. The same goes for the upscaled RegSearch screen.
+3. **Within that, order by priority:** Priority 1 is the four featured projects (Enroll App, WorkRadar, RegSearch and CDC), the four homepage cards and the Work page tiles. Priority 2 is Vitae 27, TakeCare, the CRE project, IdeaCrew Rebrand and CrossFit. Priority 3 is older work.
 4. **Each task is a checkbox** with: what to make (specific enough that I don't have to come back and ask), the source (which file, app or screen), the export size, the filename to send it as, and a rough time estimate.
 5. **End with a "send to Claude" checklist:** every filename, so I can tick them off as I hand files over. My site Claude will place them, frame them and check them.
 6. **Flag anything that needs a decision or permission** before I spend time on it. For example: client-owned photos, screenshots of an employer's CI, or a slot to remove if I can't find the material.
@@ -40,11 +40,11 @@ Keep it in plain language. Don't add new image ideas or new slots; work only fro
 - No readable fake text in AI photos (papers, screens, signs).
 - Client-owned material (Marriott photos, IdeaCrew CI screenshots) needs permission before it goes on a public site.
 
-## AI photo prompts for the four homepage cards
+## AI photo prompts for the three remaining homepage cards
+
+The Enroll App card is done (MacBook and iPhone renders).
 
 Use these as the starting prompt; place the real screen afterward.
-
-**Enroll App:** Candid documentary-style photo, eye level, of a woman in her early 40s sitting at a kitchen table in the early evening, holding a smartphone in both hands and looking at the screen with quiet relief, a small genuine smile, shoulders relaxed. Warm natural window light from the left, soft shadows. Lived-in home details slightly out of focus behind her: a mug, a folder of paperwork, a child's drawing on the fridge. The phone faces the camera at a slight angle so the full screen is visible; the screen is plain solid white with no interface or text. Sharp focus on the phone and her hands, shallow depth of field. Muted, natural colors. 35mm lens, f/2.0. Realistic hands. Wide 3:2 composition, person and phone in the right half, calm open space in the lower left. *Avoid:* text on screen, UI, logos, watermark, distorted hands, glossy stock look, posed smile, studio lighting.
 
 **WorkRadar:** Candid photo of a man in his 30s in business-casual clothes standing just inside the glass entrance of a bright, modern office lobby in the morning, holding a smartphone up at chest height toward the camera, screen facing us, as if showing it at a door. Soft daylight through the glass, blurred reception desk and plants behind him. The phone screen is plain solid white, fully visible, sharp. Natural colors, shallow depth of field, 50mm lens. Wide 3:2, phone and hand in the right third, open space lower left. *Avoid:* masks or medical imagery, text on screen, logos, watermark, distorted hands, staged corporate look.
 
@@ -54,39 +54,29 @@ Use these as the starting prompt; place the real screen afterward.
 
 ## The inventory
 
-Status key: **Add** = empty slot; **Replace** = the current image is the wrong kind, make something new; **Sharper copy** = the right image, export it again bigger. Slots marked "Keep" or "Claude does it" (re-crops my site Claude will handle) are left out of both this list and the PDF.
+Status key: **Add** = empty slot; **Replace** = the current image is the wrong kind, make something new; **Sharper copy** = the right image, export it again bigger. Slots marked "Done", "Keep" or "Claude does it" (re-crops my site Claude will handle) are left out of both this list and the PDF.
 
 
-### Homepage carousel (Priority 1)
+### Homepage featured work (Priority 1)
 
-- [ ] **Replace · Homepage card: Enroll App**
-  - What to make: Context photo: a woman in her early 40s at a kitchen table in early-evening window light, holding her phone with quiet relief, a folder of paperwork beside her. The phone shows the Enroll eligibility results screen (she can shop for plans and qualifies for financial help). Make the scene with a blank white phone screen, then place the real results screen onto it (needs the 'Eligibility results on a phone' export from the Enroll section first). Today's image is a flat line-drawn laptop with a mostly white form, and the UI fills less than half the card.
-  - Now: `thumb-enroll.png`, 1600 × 1200 px, shown 1215 px wide
-  - Send as: `enroll-home.jpg`
-  - Size: Landscape 3:2, 2400 × 1600 JPG. Keep the bottom-left third calm: the project name, tagline and tags sit there on a dark shade.
 - [ ] **Replace · Homepage card: WorkRadar**
   - What to make: Context photo: a man in his 30s in business-casual clothes just inside the glass entrance of a bright office lobby in the morning, holding his phone up toward the camera as if showing it at the door. The phone shows the all-green OK to Enter screen with the checkmark and QR code. Make the scene with a blank white phone screen, then place workradar-03-results-v2 (green half) onto it. Keep it ordinary: no masks, no real company branding. Today's image is a tall portrait image squeezed into a wide card, with empty dark bands on both sides.
-  - Now: `workradar-tile-interim.png`, 1600 × 2000 px, shown 1215 px wide
+  - Now: `workradar-tile-interim.png`, 1600 × 2000 px, shown 588 px wide
   - Send as: `workradar-home.jpg`
   - Size: Landscape 3:2, 2400 × 1600 JPG. Keep the bottom-left third calm: the project name, tagline and tags sit there on a dark shade.
 - [ ] **Replace · Homepage card: RegSearch**
-  - What to make: Context photo: a woman in her 50s with reading glasses at a tidy office desk in soft afternoon light, leaning toward an open laptop, a thick printed binder and a yellow highlighter beside it. The laptop shows the new RegSearch reading pane with yellow search highlights. Make the scene with a blank white laptop screen, then place the RegSearch screen onto it. The screen source is only 1000 px wide: upscale it first (Upscayl is free) or rebuild it in Figma at 2x. Today's image is that 1000 px screenshot stretched to 1215 px, so it's soft and letterboxed.
-  - Now: `regsearch-new3.png`, 1000 × 650 px, shown 1215 px wide
+  - What to make: Context photo: a woman in her 50s with reading glasses at a tidy office desk in soft afternoon light, leaning toward an open laptop, a thick printed binder and a yellow highlighter beside it. The laptop shows the new RegSearch reading pane with yellow search highlights. Make the scene with a blank white laptop screen, then place the RegSearch screen onto it. The screen source is only 1000 px wide: upscale it first (Upscayl is free) or rebuild it in Figma at 2x. Today's image is that 1000 px screenshot fitted into the wide card, so it's soft and letterboxed.
+  - Now: `regsearch-new3.png`, 1000 × 650 px, shown 588 px wide
   - Send as: `regsearch-home.jpg`
   - Size: Landscape 3:2, 2400 × 1600 JPG. Keep the bottom-left third calm: the project name, tagline and tags sit there on a dark shade.
 - [ ] **Replace · Homepage card: CDC Public Health Law**
-  - What to make: Context photo of the evaluation itself, not the CDC's brand: a three-quarter overhead view of a wooden desk in daylight with an open laptop, a printed report with red pen marks, yellow sticky notes and a coffee cup. The laptop shows one of your annotated cdc.gov pages with red callout circles (cdc-1). No readable text on paper, no government seals. Today's image is a 400 px stock photo of a child with the CDC logo, stretched three times its size, so it's blurry and shows the client's brand instead of your work.
-  - Now: `thumbnail400x400.png`, 400 × 400 px, shown 1215 px wide
+  - What to make: Context photo of the evaluation itself, not the CDC's brand: a three-quarter overhead view of a wooden desk in daylight with an open laptop, a printed report with red pen marks, yellow sticky notes and a coffee cup. The laptop shows one of your annotated cdc.gov pages with red callout circles (cdc-1). No readable text on paper, no government seals. Today's image is a 400 px stock photo of a child with the CDC logo, stretched to fill the card, so it's blurry and shows the client's brand instead of your work.
+  - Now: `thumbnail400x400.png`, 400 × 400 px, shown 588 px wide
   - Send as: `cdc-home.jpg`
   - Size: Landscape 3:2, 2400 × 1600 JPG. Keep the bottom-left third calm: the project name, tagline and tags sit there on a dark shade.
 
 ### Work page tiles (Priority 1)
 
-- [ ] **Replace · Work tile: Enroll App**
-  - What to make: Laptop plus phone render, like his ORA thumbnail: a MacBook Pro 14" (Space Black) open at an angle behind, showing New employer > Personal Information with the three-step progress rail on the left; an iPhone 16 Pro (Black Titanium) in front and to one side, overlapping the laptop's corner, showing the eligibility results screen. Devices fill 70–80% of the square. Today's tile is the old 400 px WordPress thumbnail: the Enroll App logo over a stock photo of pills.
-  - Now: `website-ProjectThumbnail-enroll-jpg.webp`, 400 × 400 px, shown 373 px wide
-  - Send as: `enroll-tile.png`
-  - Size: Square 1:1, 1600 × 1600. Device render on #1E2024 (the site's tile color) or a transparent PNG.
 - [ ] **Replace · Work tile: WorkRadar**
   - What to make: Two iPhones, front-facing in a slight fan: OK to Enter (all green, checkmark, QR code) in front, STOP (all red, X) behind and to one side. Both screens already exist in workradar-03-results-v2.png; export each one alone at 780 × 1688 and render. Today's tile is a tall 4:5 image fitted into the square, so it sits small with empty space around it.
   - Now: `workradar-tile-interim.png`, 1600 × 2000 px, shown 373 px wide
@@ -120,11 +110,6 @@ Status key: **Add** = empty slot; **Replace** = the current image is the wrong k
 
 ### Enroll App (Priority 1)
 
-- [ ] **Replace · Hero image (top of the page)**
-  - What to make: The same laptop-plus-phone render as the Work tile, composed wider: MacBook with New employer > Personal Information, iPhone in front with eligibility results. Today's hero is a 1824 px screen with a baked-in dark frame, a little soft at full width.
-  - Now: `enroll-newemployer-01-hero-dark.png`, 1824 × 896 px, shown 1200 px wide
-  - Send as: `enroll-hero.png`
-  - Size: 16:9, 2400 × 1350, on #1E2024 or transparent.
 - [ ] **Sharper copy · New employer sign-up**
   - Caption on the site: “Step one asks only for the account holder's details.”
   - What to make: Step one, Personal Information, filled in with the sample person Chris Smith. Re-export from Figma as a raw screen so the site can frame it; today's file has the frame baked in and is only 1060 px wide.
@@ -163,7 +148,7 @@ Status key: **Add** = empty slot; **Replace** = the current image is the wrong k
   - Size: Raw phone screen, 780 × 1688 (390 × 844 at 2x). No device frame: the site adds it. Three files.
 - [ ] **Add · Eligibility results**
   - Caption on the site: “Results first, in plain language.”
-  - What to make: The eligibility results screen at phone width, for Chris Smith: the result at the top in plain language (can shop for plans; qualifies for tax credits or other help), then one clear next-step button. This same screen is used on the homepage photo and the Work tile, so export it first.
+  - What to make: The eligibility results screen at phone width, for Chris Smith: the result at the top in plain language (can shop for plans; qualifies for tax credits or other help), then one clear next-step button.
   - Now: empty placeholder
   - Send as: `enroll-06-results-phone.png`
   - Size: Raw phone screen, 780 × 1688 (390 × 844 at 2x). No device frame: the site adds it.
@@ -217,7 +202,7 @@ Status key: **Add** = empty slot; **Replace** = the current image is the wrong k
 - [ ] **Sharper copy · A result you can't misread**
   - Caption on the site: “Come in, or stay home. Nothing in between.”
   - What to make: The OK to Enter and STOP screens. Export each on its own from Figma (you'll need them for the Work tile and homepage anyway) and I'll place them side by side.
-  - Now: `workradar-03-results-v2.png`, 1150 × 1052 px, shown 700 px wide
+  - Now: `workradar-03-results-v2.png`, 1150 × 1052 px, shown 0 px wide
   - Send as: `workradar-ok.png, workradar-stop.png`
   - Size: Raw phone screen, 780 × 1688 (390 × 844 at 2x). No device frame: the site adds it. Two files.
 - [ ] **Add · A brand for an anxious moment**
